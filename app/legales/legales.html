@@ -1,0 +1,13 @@
+<div ng-controller="LegalesController as legalCtrl" class="primary-form">
+    <!--div class="container-main"-->
+    <div class="container-main contacto-content">
+        <label class="title-font-legales font-color-text">{{legalCtrl.legal.titulo}}</label>
+
+        <div class="container-legales-content">
+            <div class="div-legal-close"><img src="images/close.png" title="Cerrar Legales" ng-click="legalCtrl.close();bayresCtrl.goToAnchor(bayresCtrl.id_origen)" class="btn-close"></div>
+            <div class="container-legales">
+                {{legalCtrl.legal.contenido}}
+            </div>
+        </div>
+    </div>
+</div>

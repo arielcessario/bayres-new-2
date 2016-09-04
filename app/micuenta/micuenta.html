@@ -1,0 +1,122 @@
+<div ng-controller="MiCuentaController as cuentaCtrl" class="primary-form">
+    <div class="container-main contacto-content">
+        <div class="title-font container-main-title">Mi Cuenta</div>
+
+        <div class="container-main-content" style="padding: 0px">
+            <div class="container-1">
+                <div class="container-datos">
+                    <div class="datos-titulo">
+                        Modificar datos personales
+                    </div>
+                    <div class="container-interno">
+                        <div class="container-datos-1">
+                            <div class="form-group">
+                                <label class="label-input">Apellido</label>
+                                <input type="text" class="form-control form-control-carrito form-control-space" ng-model="cuentaCtrl.userForm.apellido" placeholder="Apellido...">
+                            </div>
+                            <div class="form-group">
+                                <label class="label-input">Nombre</label>
+                                <input type="text" class="form-control form-control-carrito form-control-space" ng-model="cuentaCtrl.userForm.nombre" placeholder="Nombre...">
+                            </div>
+                        </div>
+                        <div class="container-datos-2">
+                            <div class="form-group">
+                                <label class="label-input">Direcci&oacute;n</label>
+                                <input type="text" class="form-control form-control-carrito form-control-space" ng-model="cuentaCtrl.userForm.calle" placeholder="Direcci&oacute;n">
+                            </div>
+                            <div class="form-group">
+                                <label class="label-input">Numero</label>
+                                <input type="text" class="form-control form-control-carrito form-control-space" ng-model="cuentaCtrl.userForm.nro" placeholder="Numero">
+                            </div>
+                        </div>
+                        <div class="container-datos-3">
+                            <div class="form-group">
+                                <label class="label-input">Mail</label>
+                                <input type="text" class="form-control form-control-carrito form-control-space" ng-model="cuentaCtrl.userForm.mail" placeholder="Mail...">
+                            </div>
+                            <div class="form-group bottom-control">
+                                <input type="checkbox" ng-model="cuentaCtrl.userForm.news_letter" >
+                                <span>Newsletter</span>
+                            </div>
+                            <div class="form-group bottom-control">
+                                <button ng-click="cuentaCtrl.updateUser();">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-message" ng-if="cuentaCtrl.messageResponse.userMsg">
+                        <div class="message">{{cuentaCtrl.messageResponse.message}}</div>
+                    </div>
+                </div>
+                <div class="container-pwd">
+                    <div class="pwd-titulo">
+                        Modificar Contrase&ntilde;a
+                    </div>
+                    <div class="pwd-interno">
+                        <div class="form-group">
+                            <label class="label-input">Contrase&ntilde;a vieja</label>
+                            <input type="password" class="form-control form-control-carrito form-control-space" ng-model="cuentaCtrl.passwordForm.password" placeholder="Contrase&ntilde;a...">
+                        </div>
+                        <div class="form-group">
+                            <label class="label-input">Contrase&ntilde;a nueva</label>
+                            <input type="password" class="form-control form-control-carrito form-control-space" ng-model="cuentaCtrl.passwordForm.password_repeat" placeholder="Contrase&ntilde;a...">
+                        </div>
+                        <!--div class="container-buttons"-->
+                        <div class="form-group bottom-control">
+                            <button ng-click="cuentaCtrl.updatePwd();">Ok</button>
+                        </div>
+                        <div class="form-message" ng-if="cuentaCtrl.messageResponse.pwdMsg">
+                            <div class="message">{{cuentaCtrl.messageResponse.message}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-2">
+                <div class="container-carrito" >
+                    <div class="carrito-historico">
+                        <span class="carrito-titulo">Ultimos pedidos</span>
+                        <select ng-click="cuentaCtrl.productos = cuentaCtrl.carrito.productos;"
+                                ng-change="cuentaCtrl.getCarritoSelected(cuentaCtrl.carrito);"
+                                ng-model="cuentaCtrl.carrito"
+                                ng-options="carrito.carrito_id + ' - ' + carrito.fecha.substring(0, 10) + ' - ' + carrito.total for carrito in cuentaCtrl.historico_pedidos"
+                                class="form-control control-select">
+                        </select>
+                    </div>
+                    <div class="carrito-productos" ng-if="cuentaCtrl.showCarritoDetalle == true">
+                        <div class="carrito-table-head">
+                            <div class="carrito-table-row-name">Producto</div>
+                            <div class="carrito-table-row">Cant.</div>
+                            <div class="carrito-table-row">Precio U.</div>
+                            <div class="carrito-table-row">Precio</div>
+                            <div class="carrito-table-row"><img src="images/cart.png" title="" hidden/></div>
+                        </div>
+                        <div class="micarrito-container">
+                            <div ng-repeat="producto in cuentaCtrl.productos" class="carrito-table-body">
+                                <div class="carrito-table-row-name font-color-text">{{producto.nombre}} </div>
+                                <div class="carrito-table-row div-input div-input-cantidad">{{producto.cantidad}}</div>
+                                <div class="carrito-table-row div-input">{{producto.precio_unitario | currency}}</div>
+                                <div class="carrito-table-row div-input">{{producto.precio_unitario * producto.cantidad | currency}}</div>
+                                <div class="carrito-table-row">
+                                    <a href="" ng-click="cuentaCtrl.addProducto(producto);">
+                                        <img src="images/cart.png" title="Agregar Producto al Carrito" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-buttons">
+                        <div class="botonera botonera-micuenta" style="width: 100%">
+                            <button class="btn-big btn-cancel" ng-click="cuentaCtrl.cancelCarrito(cuentaCtrl.carrito);">Cancelar Pedido</button>
+                            <button class="btn-big btn-margin-right" ng-click="cuentaCtrl.repeatCarrito(cuentaCtrl.carrito);">Pedilo!</button>
+                            <span class="carrito-subtotal font-color-text">Subtotal:</span>
+                            <div class="div-input-big"  style="margin-bottom: 0;height: 27px">{{cuentaCtrl.carrito.total | currency}}</div>
+                        </div>
+
+                        <div class="form-message" ng-if="cuentaCtrl.messageResponse.carritoMsg">
+                            <div class="message">{{cuentaCtrl.messageResponse.message}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

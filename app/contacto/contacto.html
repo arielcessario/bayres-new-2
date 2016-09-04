@@ -1,0 +1,46 @@
+<div ng-controller="ContactoController as contactoCtrl" class="primary-form">
+    <!--div class="container-main"-->
+    <div class="container-main contacto-content">
+        <label class="title-font font-color-text">Contacto</label>
+
+        <div class="container-main-content">
+            <div class="div-close-contacto"><img src="images/close.png" title="Cerrar detalle" ng-click="bayresCtrl.goTo({path:'/main'})" class="btn-close"></div>
+            <div class="form-message" ng-if="contactoCtrl.showError">
+                <div class="message-error">{{contactoCtrl.message}}</div>
+            </div>
+            <div class="container-contacto">
+                <div class="container-contacto-1">
+                    <div class="form-group">
+                        <label class="label-input">Nombre</label>
+                        <input type="text" class="form-control" ng-model="contactoCtrl.contactoForm.nombre"
+                                id="contacto-nombre" ng-class="{'input-error' : contactoCtrl.error_code == '1'}">
+                    </div>
+                    <div class="form-group">
+                        <label class="label-input">Mail</label>
+                        <input type="text" class="form-control" ng-model="contactoCtrl.contactoForm.mail"
+                               id="contacto-mail" ng-class="{'input-error' : contactoCtrl.error_code == '2'}">
+                    </div>
+                    <div class="form-group">
+                        <label class="label-input">Asunto</label>
+                        <input type="text" class="form-control" ng-model="contactoCtrl.contactoForm.asunto"
+                               id="contacto-asunto" ng-class="{'input-error' : contactoCtrl.error_code == '3'}">
+                    </div>
+                </div>
+                <div class="container-contacto-2">
+                    <div class="form-group">
+                        <label class="label-input">Consulta</label>
+                        <textarea type="text" class="" rows="10" cols="50" id="contacto-consulta" ng-model="contactoCtrl.contactoForm.consulta"
+                                  ng-class="{'input-error' : contactoCtrl.error_code == '4'}">
+                            {{contactoCtrl.contactoForm.consulta}}</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="botonera">
+                <button class="btn-big" ng-click="contactoCtrl.sendConsulta();">Enviar Consulta</button>
+                <button class="btn-big" ng-click="contactoCtrl.home();">Home</button>
+            </div>
+
+        </div>
+    </div>
+</div>
