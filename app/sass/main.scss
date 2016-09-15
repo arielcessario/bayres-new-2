@@ -30,6 +30,10 @@ $border_color: #8CC63F;
 @include font-face($myriad_pro_condensed, font-files("MYRIADPRO-COND.woff"));
 @include font-face($myriad_pro_regular, font-files("MYRIADPRO-REGULAR.woff"));
 
+button, input{
+  border-style: none;
+}
+
 .login {
   display: flex;
   flex-direction: row;
@@ -310,8 +314,11 @@ $border_color: #8CC63F;
     max-width: 145px;
     margin-right: 10px;
     margin-left: 10px;
-    padding: 5px;
     z-index: 401;
+    -ms-transform: scale(1, 1); /* IE 9 */
+    -webkit-transform: scale(1, 1); /* Safari */
+    transform: scale(1, 1);
+    margin-top: -5px;
 
     img {
       margin-left: 10px;
@@ -353,7 +360,7 @@ $border_color: #8CC63F;
       }
 
       .menu-desktop-btn {
-        cursor: pointer;
+        //cursor: pointer;
         font-weight: bolder;
         //margin-top: 5px;
         //margin-right: 15px;
@@ -383,6 +390,7 @@ $border_color: #8CC63F;
         -ms-transition: all 0.4s;
         -o-transition: all 0.4s;
         transition: all 0.4s;
+        cursor: pointer;
       }
 
     }
@@ -581,9 +589,9 @@ $border_color: #8CC63F;
 }
 
 #tierra3 {
-  background: url(../images/tierra_03.png) top center no-repeat;
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
+  background: url(../images/tierra_04.png) top center no-repeat;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
 
 }
 
@@ -592,12 +600,14 @@ $border_color: #8CC63F;
   position: absolute;
   top:0;
   background: url(../images/piedra_03.png) top center no-repeat;
-  //transform: translateY(-100px);
+  transform: translateY(-50px);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
 }
 
 #roca2 {
   position: absolute;
-  top:0;
+  top:20px;
   background: url(../images/piedra_02.png) top center no-repeat;
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
@@ -606,14 +616,15 @@ $border_color: #8CC63F;
   filter: blur(2px);
 }
 
-#roca3 {
+//#roca3 {
   //background: url(../images/destacados_02.png) top center no-repeat;
-  background: url(../images/.png) top center no-repeat;
+  //background: url(../images/piedra_03.png) top center no-repeat;
   //transform: translateY(100px);
-}
+//}
 
 #roca4 {
   background: url(../images/piedra_01.png) top center no-repeat;
+
 
 }
 
@@ -621,7 +632,7 @@ $border_color: #8CC63F;
   background: url("../images/lava_05.png") top center no-repeat;
   transform: translateY(300px) translateZ(0);
   -webkit-filter: blur(3px);
-  filter: blur(4px);
+  filter: blur(3px);
   height: 300px;
   //height: 50%;
   //background-color: orange;
@@ -682,18 +693,9 @@ AGREEMENT
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: #005B16;
   z-index: 200000;
   overflow-y: auto;
   overflow-x: hidden;
-  background: #575457;
-  background: -moz-linear-gradient(left, #575457 0%, #131313 53%, #474647 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, #575457), color-stop(53%, #131313), color-stop(100%, #474647));
-  background: -webkit-linear-gradient(left, #575457 0%, #131313 53%, #474647 100%);
-  background: -o-linear-gradient(left, #575457 0%, #131313 53%, #474647 100%);
-  background: -ms-linear-gradient(left, #575457 0%, #131313 53%, #474647 100%);
-  background: linear-gradient(to right, #575457 0%, #131313 53%, #474647 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#575457', endColorstr='#474647', GradientType=1);
 }
 
 .agreement-form-container {
@@ -704,6 +706,14 @@ AGREEMENT
   align-items: center;
   height: 100%;
   width: 100%;
+  background: rgba(164,179,87,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(49,56,6,1) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(164,179,87,1)), color-stop(100%, rgba(49,56,6,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(49,56,6,1) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(49,56,6,1) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(164,179,87,1) 0%, rgba(49,56,6,1) 100%);
+  background: radial-gradient(ellipse at center, rgba(164,179,87,1) 0%, rgba(49,56,6,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#313806', GradientType=1 );
 }
 
 .agreement-logo {
@@ -725,7 +735,7 @@ AGREEMENT
   font-size: 50px;
   position: relative;
   line-height: 55px;
-  color: $font_color_title;
+  color: lightgray;
   margin-top: 30px;
   text-align: center;
   @media (max-width: 360px) {
@@ -740,7 +750,7 @@ AGREEMENT
   position: relative;
   line-height: 26px;
   top: 10px;
-  color: $font_color_text;
+  color: white;
   padding-bottom: 30px;
   margin-left: 8%;
   margin-right: 8%;
@@ -1122,7 +1132,7 @@ CONTENEDORES
   text-align: justify;
   text-justify: inter-word;
   font-family: $myriad_pro_condensed, serif;
-  min-width: 60%;
+  min-width: 55%;
 }
 
 /**
@@ -1187,19 +1197,31 @@ CONTROLES
 }
 
 .btn-info {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background: url("../images/info_2.png") 50% 50% no-repeat;
   background-size: 90%;
   cursor: pointer;
+  margin-top: -5px;
+  -webkit-transition: all ease-in 0.2s;
+  -moz-transition: all ease-in 0.2s;
+  -ms-transition: all ease-in 0.2s;
+  -o-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
+
 }
 
 .btn-info:hover {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background: url("../images/info_2b.png") 50% 50% no-repeat;
   background-size: 90%;
   cursor: pointer;
+  -webkit-transition: all ease-in 0.2s;
+  -moz-transition: all ease-in 0.2s;
+  -ms-transition: all ease-in 0.2s;
+  -o-transition: all ease-in 0.2s;
+  transition: all ease-in 0.2s;
 }
 
 .btn-close {
@@ -1759,14 +1781,17 @@ textarea {
 .detalle-imagen {
   width: 220px;
   height: 220px;
-  border: $border_color 1px solid;
-  padding: 3px;
+  border: #8CC63F 1px solid;
+  margin-left: 30px;
+  -webkit-border-radius: 5px;
 }
 
 .detalle-titulo {
-  color: $font_color_title;
+  color: #8cc63f;
   font-size: 37px;
-  text-align: center;
+  text-align: left;
+  margin-top: 19px;
+  margin-left: 30px;
 }
 
 .div-close {
@@ -1796,6 +1821,9 @@ textarea {
 .div-detalle {
   //margin-top: 30px;
   min-height: 250px;
+  font-size: 22px;
+  padding: 32px;
+  line-height: 26px;
 }
 
 .div-button {
@@ -1847,6 +1875,7 @@ textarea {
   border: $border_color 1px solid;
   background-color: rgba(0, 0, 0, 0.7);
   padding-bottom: 5px;
+  -webkit-border-radius: 3px;
   @media (max-width: 700px) {
     flex-direction: column;
   }
@@ -1878,6 +1907,7 @@ textarea {
 .oferta-imagen {
   width: 300px;
   height: 300px;
+  -webkit-border-radius: 3px;
   border: 1px solid $border_color;
   padding: 3px;
   @media (max-width: 700px) {
@@ -1938,7 +1968,6 @@ textarea {
   height: 50px;
   background: url("../images/info_2.png") 50% 50% no-repeat;
   background-size: 100%;
-  cursor: pointer;
 }
 
 .btn-info-big:hover {
@@ -2269,6 +2298,8 @@ input[type='checkbox'] {
 }
 
 .confirm-container{
+  margin-left: 30%!important;
+  text-align: center;
   background: rgba(255,175,75,1);
   background: -moz-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
   background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,175,75,1)), color-stop(100%, rgba(255,146,10,1)));
@@ -2278,9 +2309,10 @@ input[type='checkbox'] {
   background: linear-gradient(to bottom, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a', GradientType=0 );
   //position: fixed;
-  color: #fff;
   padding: 10px 30px;
+  color: white;
   border-radius: 10px;
+  font-size: 22px;
 }
 
 .animated{
