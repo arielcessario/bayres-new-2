@@ -655,38 +655,44 @@ button, input {
 #sucursal2 {
   background: url(../images/sucursales_02.png) top center no-repeat;
 }
+@media (max-width: 880px) {
+  /* line 562, ../sass/main.scss */
+  #sucursal2 {
+    background: url(../images/sucursales_02M.png) top center no-repeat;
+  }
+}
 
-/* line 567, ../sass/main.scss */
+/* line 571, ../sass/main.scss */
 #sucursal3 {
   background: url(../images/sucursales_01.png) top center no-repeat;
 }
 @media (max-width: 880px) {
-  /* line 567, ../sass/main.scss */
+  /* line 571, ../sass/main.scss */
   #sucursal3 {
     background: url(../images/sucursales_01M.png) top center no-repeat;
   }
 }
 
-/* line 579, ../sass/main.scss */
+/* line 583, ../sass/main.scss */
 #tierra1 {
   background: url(../images/tierra_01.png) top center no-repeat;
   -webkit-filter: blur(4px);
   filter: blur(4px);
 }
 
-/* line 587, ../sass/main.scss */
+/* line 591, ../sass/main.scss */
 #tierra2 {
   background: url(../images/tierra_02.png) top center no-repeat;
 }
 
-/* line 591, ../sass/main.scss */
+/* line 595, ../sass/main.scss */
 #tierra3 {
   background: url(../images/tierra_04.png) top center no-repeat;
   -webkit-filter: blur(3px);
   filter: blur(3px);
 }
 
-/* line 598, ../sass/main.scss */
+/* line 602, ../sass/main.scss */
 #roca1 {
   position: absolute;
   top: 0;
@@ -696,7 +702,7 @@ button, input {
   filter: blur(3px);
 }
 
-/* line 608, ../sass/main.scss */
+/* line 612, ../sass/main.scss */
 #roca2 {
   position: absolute;
   top: 20px;
@@ -708,12 +714,12 @@ button, input {
   filter: blur(2px);
 }
 
-/* line 625, ../sass/main.scss */
+/* line 629, ../sass/main.scss */
 #roca4 {
   background: url(../images/piedra_01.png) top center no-repeat;
 }
 
-/* line 631, ../sass/main.scss */
+/* line 635, ../sass/main.scss */
 #lava0 {
   background: url("../images/lava_05.png") top center no-repeat;
   transform: translateY(300px) translateZ(0);
@@ -722,7 +728,7 @@ button, input {
   height: 300px;
 }
 
-/* line 641, ../sass/main.scss */
+/* line 645, ../sass/main.scss */
 #lava1 {
   background: url("../images/lava_04.png") top center no-repeat;
   transform: translateY(350px) translateZ(0);
@@ -731,31 +737,31 @@ button, input {
   height: 200px;
 }
 
-/* line 651, ../sass/main.scss */
+/* line 655, ../sass/main.scss */
 #lava2 {
   background: url("../images/lava_03.png") top center no-repeat;
   transform: translateY(400px) translateZ(0);
   height: 200px;
 }
 
-/* line 661, ../sass/main.scss */
+/* line 665, ../sass/main.scss */
 #lava4 {
   background: url("../images/lava_01.png") top center no-repeat;
 }
 
-/* line 668, ../sass/main.scss */
+/* line 672, ../sass/main.scss */
 #lava3 {
   background: url("../images/lava_02.png") top center no-repeat;
   transform: translateY(100px) translateZ(0);
 }
 
-/* line 679, ../sass/main.scss */
+/* line 683, ../sass/main.scss */
 body {
   font-family: "Myriad Pro Bold Condensed", serif;
   overflow-x: hidden;
 }
 
-/* line 685, ../sass/main.scss */
+/* line 689, ../sass/main.scss */
 .font-color-text {
   color: #fff;
 }
@@ -763,7 +769,7 @@ body {
 /*
 AGREEMENT
 */
-/* line 692, ../sass/main.scss */
+/* line 696, ../sass/main.scss */
 .agreement-form {
   position: fixed;
   height: 100%;
@@ -773,7 +779,7 @@ AGREEMENT
   overflow-x: hidden;
 }
 
-/* line 701, ../sass/main.scss */
+/* line 705, ../sass/main.scss */
 .agreement-form-container {
   display: flex;
   flex-direction: column;
@@ -793,7 +799,7 @@ AGREEMENT
 }
 
 @media (max-width: 360px) {
-  /* line 723, ../sass/main.scss */
+  /* line 727, ../sass/main.scss */
   .img-logo {
     width: 335px;
     height: 120px;
@@ -803,25 +809,26 @@ AGREEMENT
   }
 }
 
-/* line 733, ../sass/main.scss */
+/* line 737, ../sass/main.scss */
 .agreement-titulo {
   font-family: "Myriad Pro Bold Condensed";
   font-size: 50px;
   position: relative;
   line-height: 55px;
-  color: lightgray;
+  color: black;
   margin-top: 30px;
   text-align: center;
 }
 @media (max-width: 360px) {
-  /* line 733, ../sass/main.scss */
+  /* line 737, ../sass/main.scss */
   .agreement-titulo {
     font-size: 45px;
     margin-top: 0px;
+    padding: 10px;
   }
 }
 
-/* line 747, ../sass/main.scss */
+/* line 752, ../sass/main.scss */
 .agreement-text {
   font-family: "Myriad Pro Condensed", serif;
   font-size: 20px;
@@ -835,30 +842,33 @@ AGREEMENT
   text-align: center;
 }
 @media (max-width: 360px) {
-  /* line 747, ../sass/main.scss */
+  /* line 752, ../sass/main.scss */
   .agreement-text {
+    padding: 10px !important;
     font-size: 16px;
+    font-weight: lighter;
+    text-align: left !important;
   }
 }
 
 /*
 CONTENEDORES
 */
-/* line 766, ../sass/main.scss */
+/* line 774, ../sass/main.scss */
 .container-title {
   text-align: center;
   width: 100%;
   margin-bottom: 20px;
 }
 
-/* line 772, ../sass/main.scss */
+/* line 780, ../sass/main.scss */
 .title-font {
   font-family: "Myriad Pro Bold Condensed";
   font-size: 71px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
 }
 
-/* line 778, ../sass/main.scss */
+/* line 786, ../sass/main.scss */
 .primary-form {
   display: flex;
   flex-direction: column;
@@ -868,19 +878,19 @@ CONTENEDORES
   align-items: center;
 }
 
-/* line 787, ../sass/main.scss */
+/* line 795, ../sass/main.scss */
 .container-form, .container-main {
   z-index: 1;
   position: absolute;
 }
 @media (max-width: 700px) {
-  /* line 787, ../sass/main.scss */
+  /* line 795, ../sass/main.scss */
   .container-form, .container-main {
     margin: 0;
   }
 }
 
-/* line 797, ../sass/main.scss */
+/* line 805, ../sass/main.scss */
 .container-main {
   display: flex;
   flex-direction: column;
@@ -891,7 +901,7 @@ CONTENEDORES
   padding-top: 35px;
 }
 
-/* line 809, ../sass/main.scss */
+/* line 817, ../sass/main.scss */
 .container-form {
   min-height: 370px;
   width: 690px;
@@ -907,13 +917,13 @@ CONTENEDORES
   padding-top: 35px;
 }
 @media (max-width: 360px) {
-  /* line 809, ../sass/main.scss */
+  /* line 817, ../sass/main.scss */
   .container-form {
     width: 340px;
   }
 }
 
-/* line 827, ../sass/main.scss */
+/* line 835, ../sass/main.scss */
 .container-form-2 {
   margin: 40px 0;
   display: flex;
@@ -924,13 +934,13 @@ CONTENEDORES
   align-items: center;
 }
 
-/* line 837, ../sass/main.scss */
+/* line 845, ../sass/main.scss */
 .container-1, .container-2 {
   width: 100%;
   margin-top: 15px;
 }
 
-/* line 842, ../sass/main.scss */
+/* line 850, ../sass/main.scss */
 .container-1 {
   display: flex;
   flex-direction: row;
@@ -940,12 +950,12 @@ CONTENEDORES
   align-items: flex-start;
 }
 
-/* line 851, ../sass/main.scss */
+/* line 859, ../sass/main.scss */
 .container-2 {
   margin-bottom: 15px;
 }
 
-/* line 855, ../sass/main.scss */
+/* line 863, ../sass/main.scss */
 .container-datos {
   order: 0;
   flex: 2 1 auto;
@@ -958,38 +968,38 @@ CONTENEDORES
   margin: 0 15px;
 }
 */
-/* line 866, ../sass/main.scss */
+/* line 874, ../sass/main.scss */
 .container-pwd {
   order: 0;
   flex: 1 1 auto;
   align-self: auto;
 }
 
-/* line 872, ../sass/main.scss */
+/* line 880, ../sass/main.scss */
 .container-datos, .container-pwd, .container-carrito {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 876, ../sass/main.scss */
+/* line 884, ../sass/main.scss */
 .container-datos {
   margin-left: 15px;
   margin-right: 7px;
   min-height: 290px;
 }
 
-/* line 882, ../sass/main.scss */
+/* line 890, ../sass/main.scss */
 .container-pwd {
   margin-left: 7px;
   margin-right: 15px;
   min-height: 290px;
 }
 
-/* line 888, ../sass/main.scss */
+/* line 896, ../sass/main.scss */
 .container-carrito {
   margin: 0 15px;
 }
 
-/* line 892, ../sass/main.scss */
+/* line 900, ../sass/main.scss */
 .container-interno {
   display: flex;
   flex-direction: row;
@@ -999,13 +1009,13 @@ CONTENEDORES
   align-items: flex-start;
 }
 @media (max-width: 800px) {
-  /* line 892, ../sass/main.scss */
+  /* line 900, ../sass/main.scss */
   .container-interno {
     flex-direction: column;
   }
 }
 
-/* line 905, ../sass/main.scss */
+/* line 913, ../sass/main.scss */
 .carrito-historico, .carrito-productos {
   display: flex;
   flex-direction: row;
@@ -1016,13 +1026,13 @@ CONTENEDORES
   padding: 10px 0;
 }
 @media (max-width: 800px) {
-  /* line 905, ../sass/main.scss */
+  /* line 913, ../sass/main.scss */
   .carrito-historico, .carrito-productos {
     flex-direction: column;
   }
 }
 
-/* line 919, ../sass/main.scss */
+/* line 927, ../sass/main.scss */
 .container-producto {
   width: 180px;
   margin: 5px 5px 10px 5px;
@@ -1039,14 +1049,14 @@ CONTENEDORES
 }
 
 @media (max-width: 800px) {
-  /* line 934, ../sass/main.scss */
+  /* line 942, ../sass/main.scss */
   .responsive-container {
     max-width: 100%;
     overflow-x: auto;
   }
 }
 
-/* line 941, ../sass/main.scss */
+/* line 949, ../sass/main.scss */
 .container-producto-border {
   border: 1px solid #8cc63f;
   width: 170px;
@@ -1060,7 +1070,7 @@ CONTENEDORES
   align-items: center;
 }
 
-/* line 954, ../sass/main.scss */
+/* line 962, ../sass/main.scss */
 .producto-nombre {
   font-family: "Myriad Pro Bold Condensed", serif;
   font-size: 19px;
@@ -1076,13 +1086,13 @@ CONTENEDORES
   text-shadow: 1px 1px 1px #000000;
 }
 
-/* line 969, ../sass/main.scss */
+/* line 977, ../sass/main.scss */
 .producto-img {
   height: 112px;
   width: 112px;
 }
 
-/* line 974, ../sass/main.scss */
+/* line 982, ../sass/main.scss */
 .producto-botones {
   display: flex;
   flex-direction: row;
@@ -1092,36 +1102,36 @@ CONTENEDORES
   align-items: center;
 }
 
-/* line 983, ../sass/main.scss */
+/* line 991, ../sass/main.scss */
 .producto-peso, .producto-precio {
   font-size: 20px;
   margin-bottom: 5px;
 }
 
-/* line 988, ../sass/main.scss */
+/* line 996, ../sass/main.scss */
 .producto-peso-big, .producto-precio-big {
   font-size: 28px;
   margin-bottom: 5px;
 }
 
-/* line 993, ../sass/main.scss */
+/* line 1001, ../sass/main.scss */
 .producto-peso, .producto-peso-big {
   color: red;
 }
 
-/* line 997, ../sass/main.scss */
+/* line 1005, ../sass/main.scss */
 .producto-precio {
   color: #fff;
   margin-right: 25px;
 }
 
-/* line 1002, ../sass/main.scss */
+/* line 1010, ../sass/main.scss */
 .container-main-title {
   color: #fff;
   margin-bottom: 15px;
 }
 
-/* line 1007, ../sass/main.scss */
+/* line 1015, ../sass/main.scss */
 .container-main-productos, .container-main-ofertas {
   display: flex;
   flex-direction: row;
@@ -1137,7 +1147,7 @@ CONTENEDORES
 }
 
 @media (max-width: 800px) {
-  /* line 1025, ../sass/main.scss */
+  /* line 1033, ../sass/main.scss */
   #inner-destacados,
   #inner-masvendidos {
     max-height: 410px !important;
@@ -1158,7 +1168,7 @@ CONTENEDORES
 }
 */
 @media (max-width: 800px) {
-  /* line 1044, ../sass/main.scss */
+  /* line 1052, ../sass/main.scss */
   #inner-destacados,
   #inner-masvendidos,
   #inner-productos {
@@ -1169,7 +1179,7 @@ CONTENEDORES
   }
 }
 
-/* line 1055, ../sass/main.scss */
+/* line 1063, ../sass/main.scss */
 .container-main-productos {
   max-height: 1500px;
   overflow-y: auto;
@@ -1178,7 +1188,7 @@ CONTENEDORES
 }
 
 @media (max-width: 700px) {
-  /* line 1063, ../sass/main.scss */
+  /* line 1071, ../sass/main.scss */
   .container-main-ofertas {
     flex-direction: column;
     justify-content: center;
@@ -1187,7 +1197,7 @@ CONTENEDORES
     min-width: 0;
   }
 }
-/* line 1072, ../sass/main.scss */
+/* line 1080, ../sass/main.scss */
 .container-main-content {
   display: flex;
   flex-direction: column;
@@ -1210,13 +1220,13 @@ CONTENEDORES
   */
 }
 @media (max-width: 800px) {
-  /* line 1072, ../sass/main.scss */
+  /* line 1080, ../sass/main.scss */
   .container-main-content {
     width: 99%;
   }
 }
 
-/* line 1098, ../sass/main.scss */
+/* line 1106, ../sass/main.scss */
 .container-detalle-content {
   display: flex;
   flex-direction: row;
@@ -1237,19 +1247,19 @@ CONTENEDORES
   */
 }
 @media (max-width: 800px) {
-  /* line 1098, ../sass/main.scss */
+  /* line 1106, ../sass/main.scss */
   .container-detalle-content {
     flex-direction: column;
     width: 95%;
   }
 }
 
-/* line 1126, ../sass/main.scss */
+/* line 1134, ../sass/main.scss */
 .container-detalle-1, .container-detalle-2 {
   margin: 0 15px;
 }
 
-/* line 1130, ../sass/main.scss */
+/* line 1138, ../sass/main.scss */
 .container-detalle-2 {
   color: #fff;
   text-align: justify;
@@ -1261,7 +1271,7 @@ CONTENEDORES
 /**
 CONTROLES
 */
-/* line 1141, ../sass/main.scss */
+/* line 1149, ../sass/main.scss */
 .botonera {
   margin: 20px;
   display: flex;
@@ -1277,13 +1287,13 @@ CONTROLES
   */
 }
 @media (max-width: 360px) {
-  /* line 1141, ../sass/main.scss */
+  /* line 1149, ../sass/main.scss */
   .botonera {
     margin-bottom: 30px;
   }
 }
 
-/* line 1159, ../sass/main.scss */
+/* line 1167, ../sass/main.scss */
 .btn-carrito, .btn-carrigo-big {
   width: 90px;
   height: 40px;
@@ -1298,14 +1308,14 @@ CONTROLES
   align-items: center;
 }
 
-/* line 1173, ../sass/main.scss */
+/* line 1181, ../sass/main.scss */
 .btn-carrigo-big {
   width: 130px;
   height: 58px;
   background: url("../images/boton-oferta.png") 50% 50% no-repeat;
 }
 
-/* line 1179, ../sass/main.scss */
+/* line 1187, ../sass/main.scss */
 .btn-carrito:hover {
   width: 90px;
   height: 40px;
@@ -1320,14 +1330,14 @@ CONTROLES
   align-items: center;
 }
 
-/* line 1193, ../sass/main.scss */
+/* line 1201, ../sass/main.scss */
 .btn-carrigo-big:hover {
   width: 130px;
   height: 58px;
   background: url("../images/boton-oferta-hover.png") 50% 50% no-repeat;
 }
 
-/* line 1199, ../sass/main.scss */
+/* line 1207, ../sass/main.scss */
 .btn-info {
   width: 30px;
   height: 30px;
@@ -1342,7 +1352,7 @@ CONTROLES
   transition: all ease-in 0.2s;
 }
 
-/* line 1214, ../sass/main.scss */
+/* line 1222, ../sass/main.scss */
 .btn-info:hover {
   width: 32px;
   height: 32px;
@@ -1356,12 +1366,12 @@ CONTROLES
   transition: all ease-in 0.2s;
 }
 
-/* line 1227, ../sass/main.scss */
+/* line 1235, ../sass/main.scss */
 .btn-close {
   cursor: pointer;
 }
 
-/* line 1231, ../sass/main.scss */
+/* line 1239, ../sass/main.scss */
 button {
   width: 100px;
   height: 30px;
@@ -1383,14 +1393,14 @@ button {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4ddb4', endColorstr='#006200', GradientType=0);
 }
 
-/* line 1252, ../sass/main.scss */
+/* line 1260, ../sass/main.scss */
 .btn-big {
   width: 120px;
   height: 37px;
   font-size: 16px;
 }
 
-/* line 1258, ../sass/main.scss */
+/* line 1266, ../sass/main.scss */
 .form-control {
   display: block;
   margin: 0 10px;
@@ -1410,20 +1420,20 @@ button {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-/* line 1278, ../sass/main.scss */
+/* line 1286, ../sass/main.scss */
 .form-message {
   margin-top: 20px;
   text-align: center;
   width: 100%;
 }
 
-/* line 1284, ../sass/main.scss */
+/* line 1292, ../sass/main.scss */
 .message {
   font-weight: bold;
   color: #8cc63f;
 }
 
-/* line 1289, ../sass/main.scss */
+/* line 1297, ../sass/main.scss */
 .datos-titulo, .pwd-titulo, .carrito-titulo {
   font-size: 24px;
   color: #8cc63f;
@@ -1431,24 +1441,24 @@ button {
   margin: 15px 0;
 }
 
-/* line 1296, ../sass/main.scss */
+/* line 1304, ../sass/main.scss */
 .carrito-titulo {
   margin-right: 5px;
 }
 
-/* line 1300, ../sass/main.scss */
+/* line 1308, ../sass/main.scss */
 .label-input {
   font-size: 18px;
   color: #fff;
   margin-left: 10px;
 }
 
-/* line 1306, ../sass/main.scss */
+/* line 1314, ../sass/main.scss */
 .form-group {
   margin-bottom: 15px;
 }
 
-/* line 1310, ../sass/main.scss */
+/* line 1318, ../sass/main.scss */
 label {
   display: inline-block;
   max-width: 100%;
@@ -1456,20 +1466,20 @@ label {
   font-weight: 700;
 }
 
-/* line 1317, ../sass/main.scss */
+/* line 1325, ../sass/main.scss */
 .control-select {
   height: 38px;
   width: 300px;
   margin-left: 5px;
 }
 @media (max-width: 700px) {
-  /* line 1317, ../sass/main.scss */
+  /* line 1325, ../sass/main.scss */
   .control-select {
     margin: 10px 0;
   }
 }
 
-/* line 1326, ../sass/main.scss */
+/* line 1334, ../sass/main.scss */
 .carrito-table-head, .carrito-table-body {
   display: flex;
   flex-direction: row;
@@ -1480,46 +1490,46 @@ label {
   width: 100%;
 }
 
-/* line 1336, ../sass/main.scss */
+/* line 1344, ../sass/main.scss */
 .carrito-table-head {
   color: #8cc63f;
 }
 
 @media (max-width: 600px) {
-  /* line 1341, ../sass/main.scss */
+  /* line 1349, ../sass/main.scss */
   .carrito-table-body {
     font-family: "Myriad Pro Condensed";
   }
 }
-/* line 1346, ../sass/main.scss */
+/* line 1354, ../sass/main.scss */
 .carrito-table-row-name {
   width: 220px;
 }
 @media (max-width: 600px) {
-  /* line 1346, ../sass/main.scss */
+  /* line 1354, ../sass/main.scss */
   .carrito-table-row-name {
     width: 40%;
   }
 }
 
-/* line 1353, ../sass/main.scss */
+/* line 1361, ../sass/main.scss */
 .carrito-table-row {
   width: 85px;
   text-align: center;
 }
 @media (max-width: 600px) {
-  /* line 1353, ../sass/main.scss */
+  /* line 1361, ../sass/main.scss */
   .carrito-table-row {
     width: 15%;
   }
 }
 
-/* line 1361, ../sass/main.scss */
+/* line 1369, ../sass/main.scss */
 .table-row-image {
   width: 32px;
 }
 
-/* line 1365, ../sass/main.scss */
+/* line 1373, ../sass/main.scss */
 .div-input, .div-input-big {
   background-color: #fff;
   padding: 5px 10px;
@@ -1529,27 +1539,27 @@ label {
   text-align: right;
 }
 
-/* line 1374, ../sass/main.scss */
+/* line 1382, ../sass/main.scss */
 .div-input {
   width: 60px;
   font-size: 12px;
 }
 @media (max-width: 600px) {
-  /* line 1374, ../sass/main.scss */
+  /* line 1382, ../sass/main.scss */
   .div-input {
     width: 10%;
     font-size: 15px;
   }
 }
 
-/* line 1383, ../sass/main.scss */
+/* line 1391, ../sass/main.scss */
 .div-input-big {
   width: 90px;
   font-size: 18px;
   height: 20px;
 }
 
-/* line 1389, ../sass/main.scss */
+/* line 1397, ../sass/main.scss */
 .div-image-small {
   background-color: #fff;
   padding: 2px;
@@ -1558,7 +1568,7 @@ label {
   height: 24px;
 }
 
-/* line 1400, ../sass/main.scss */
+/* line 1408, ../sass/main.scss */
 .carrito-entrega {
   display: flex;
   flex-direction: row;
@@ -1569,19 +1579,19 @@ label {
   padding: 20px 0;
 }
 @media (max-width: 700px) {
-  /* line 1400, ../sass/main.scss */
+  /* line 1408, ../sass/main.scss */
   .carrito-entrega {
     flex-direction: column;
   }
 }
 
-/* line 1413, ../sass/main.scss */
+/* line 1421, ../sass/main.scss */
 .carrito-subtotal {
   font-size: 26px;
   font-weight: bold;
 }
 
-/* line 1418, ../sass/main.scss */
+/* line 1426, ../sass/main.scss */
 .container-contacto {
   display: flex;
   flex-direction: row;
@@ -1592,11 +1602,11 @@ label {
   width: 100%;
 }
 @media (max-width: 800px) {
-  /* line 1418, ../sass/main.scss */
+  /* line 1426, ../sass/main.scss */
   .container-contacto {
     flex-direction: column;
   }
-  /* line 1429, ../sass/main.scss */
+  /* line 1437, ../sass/main.scss */
   .container-contacto .container-contacto-1, .container-contacto .container-contacto-2 {
     width: 100%;
     display: flex;
@@ -1606,7 +1616,7 @@ label {
     margin-right: 0px;
     margin-left: 0px;
   }
-  /* line 1438, ../sass/main.scss */
+  /* line 1446, ../sass/main.scss */
   .container-contacto .container-contacto-1 .form-group, .container-contacto .container-contacto-2 .form-group {
     width: 100%;
     display: flex;
@@ -1614,28 +1624,28 @@ label {
     justify-content: center;
     align-items: center;
   }
-  /* line 1444, ../sass/main.scss */
+  /* line 1452, ../sass/main.scss */
   .container-contacto .container-contacto-1 .form-group .form-control, .container-contacto .container-contacto-2 .form-group .form-control {
     width: 80%;
   }
 }
 
-/* line 1453, ../sass/main.scss */
+/* line 1461, ../sass/main.scss */
 .container-contacto-1, .container-contacto-2 {
   width: 40%;
 }
 
-/* line 1457, ../sass/main.scss */
+/* line 1465, ../sass/main.scss */
 .container-contacto-1 {
   margin-right: 25px;
 }
 
-/* line 1461, ../sass/main.scss */
+/* line 1469, ../sass/main.scss */
 .container-contacto-2 {
   margin-left: 30px;
 }
 
-/* line 1465, ../sass/main.scss */
+/* line 1473, ../sass/main.scss */
 textarea {
   width: 250px;
   height: 178px;
@@ -1643,7 +1653,7 @@ textarea {
   border-radius: 10px;
 }
 
-/* line 1472, ../sass/main.scss */
+/* line 1480, ../sass/main.scss */
 .container-buttons {
   display: flex;
   flex-direction: row;
@@ -1654,7 +1664,7 @@ textarea {
   margin-bottom: 15px;
 }
 
-/* line 1482, ../sass/main.scss */
+/* line 1490, ../sass/main.scss */
 .btn-cancel {
   background: #a90329;
   background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
@@ -1666,7 +1676,7 @@ textarea {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a90329', endColorstr='#6d0019', GradientType=0);
 }
 
-/* line 1493, ../sass/main.scss */
+/* line 1501, ../sass/main.scss */
 .carrito-totales {
   color: #fff;
   font-size: 54px;
@@ -1674,13 +1684,13 @@ textarea {
   text-align: center;
 }
 @media (max-width: 700px) {
-  /* line 1493, ../sass/main.scss */
+  /* line 1501, ../sass/main.scss */
   .carrito-totales {
     margin-top: 20px;
   }
 }
 
-/* line 1503, ../sass/main.scss */
+/* line 1511, ../sass/main.scss */
 .info-envios {
   font-family: "Myriad Pro Condensed", serif;
   font-size: 18px;
@@ -1689,13 +1699,13 @@ textarea {
   margin: 15px 10%;
 }
 @media (max-width: 600px) {
-  /* line 1503, ../sass/main.scss */
+  /* line 1511, ../sass/main.scss */
   .info-envios {
     margin: 0 10%;
   }
 }
 
-/* line 1515, ../sass/main.scss */
+/* line 1523, ../sass/main.scss */
 #medios {
   background-color: #FCFCFC;
   font-family: "Myriad Pro Bold Condensed", serif;
@@ -1705,7 +1715,7 @@ textarea {
   white-space: nowrap;
 }
 
-/* line 1524, ../sass/main.scss */
+/* line 1532, ../sass/main.scss */
 #medios {
   position: absolute;
   height: 50px;
@@ -1715,13 +1725,13 @@ textarea {
   z-index: 50;
 }
 
-/* line 1533, ../sass/main.scss */
+/* line 1541, ../sass/main.scss */
 .medio-pagos-text {
   padding: 5px;
   margin-top: 15px;
 }
 
-/* line 1539, ../sass/main.scss */
+/* line 1547, ../sass/main.scss */
 .medio-pagos {
   display: flex;
   flex-direction: row;
@@ -1731,14 +1741,14 @@ textarea {
   align-items: center;
 }
 
-/* line 1549, ../sass/main.scss */
+/* line 1557, ../sass/main.scss */
 .medio-pagos img {
   width: 40px;
   height: 30px;
   padding: 5px 5px 0 5px;
 }
 @media (max-width: 400px) {
-  /* line 1549, ../sass/main.scss */
+  /* line 1557, ../sass/main.scss */
   .medio-pagos img {
     width: 30px;
     height: 20px;
@@ -1746,7 +1756,7 @@ textarea {
   }
 }
 
-/* line 1560, ../sass/main.scss */
+/* line 1568, ../sass/main.scss */
 #footer {
   width: 100%;
   overflow-x: auto;
@@ -1754,7 +1764,7 @@ textarea {
   font-family: "Myriad Pro Condensed", serif;
 }
 
-/* line 1567, ../sass/main.scss */
+/* line 1575, ../sass/main.scss */
 #footer {
   position: absolute;
   height: 450px;
@@ -1765,7 +1775,7 @@ textarea {
   background-color: #000000;
 }
 
-/* line 1577, ../sass/main.scss */
+/* line 1585, ../sass/main.scss */
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -1775,12 +1785,12 @@ textarea {
   align-items: center;
 }
 
-/* line 1586, ../sass/main.scss */
+/* line 1594, ../sass/main.scss */
 .footer-upper {
   margin-top: 20px;
 }
 
-/* line 1590, ../sass/main.scss */
+/* line 1598, ../sass/main.scss */
 .footer-lower {
   display: flex;
   flex-direction: row;
@@ -1791,18 +1801,18 @@ textarea {
   margin-top: 50px;
 }
 @media (max-width: 360px) {
-  /* line 1590, ../sass/main.scss */
+  /* line 1598, ../sass/main.scss */
   .footer-lower {
     margin-top: 15px;
   }
 }
 
-/* line 1603, ../sass/main.scss */
+/* line 1611, ../sass/main.scss */
 .footer-lower-colum {
   width: 150px;
 }
 @media (max-width: 360px) {
-  /* line 1603, ../sass/main.scss */
+  /* line 1611, ../sass/main.scss */
   .footer-lower-colum {
     width: 60px;
     font-size: 12px;
@@ -1810,20 +1820,20 @@ textarea {
   }
 }
 
-/* line 1612, ../sass/main.scss */
+/* line 1620, ../sass/main.scss */
 .footer-lower-title {
   color: #8cc63f;
   font-family: "Myriad Pro Bold Condensed", serif;
   font-size: 25px;
 }
 @media (max-width: 400px) {
-  /* line 1612, ../sass/main.scss */
+  /* line 1620, ../sass/main.scss */
   .footer-lower-title {
     font-size: 16px;
   }
 }
 
-/* line 1622, ../sass/main.scss */
+/* line 1630, ../sass/main.scss */
 .footer-lower-link {
   font-family: "Myriad Pro Condensed", serif;
   line-height: 22px;
@@ -1832,12 +1842,12 @@ textarea {
   cursor: pointer;
 }
 
-/* line 1630, ../sass/main.scss */
+/* line 1638, ../sass/main.scss */
 .footer-lower-link:hover {
   color: #ffff00;
 }
 
-/* line 1634, ../sass/main.scss */
+/* line 1642, ../sass/main.scss */
 .copyright {
   width: 100%;
   margin-top: 50px;
@@ -1845,26 +1855,26 @@ textarea {
   font-size: 14px;
 }
 
-/* line 1641, ../sass/main.scss */
+/* line 1649, ../sass/main.scss */
 .ac-desarrollo {
   text-decoration: none;
   color: #fff;
 }
 
-/* line 1646, ../sass/main.scss */
+/* line 1654, ../sass/main.scss */
 .ac-desarrollo:hover {
   color: #ffff00;
 }
 
 @media (max-width: 360px) {
-  /* line 1650, ../sass/main.scss */
+  /* line 1658, ../sass/main.scss */
   .medio-pagos-text {
     display: none;
   }
 }
 
 @media (max-width: 360px) {
-  /* line 1656, ../sass/main.scss */
+  /* line 1664, ../sass/main.scss */
   .img-logo-footer {
     width: 335px;
     height: 100px;
@@ -1872,7 +1882,7 @@ textarea {
   }
 }
 
-/* line 1665, ../sass/main.scss */
+/* line 1673, ../sass/main.scss */
 #buscar {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b4ddb4+0,83c783+17,52b152+33,008a00+67,005700+83,002400+100;Green+3D+%231 */
   background: #b4ddb4;
@@ -1896,18 +1906,18 @@ textarea {
   z-index: 1;
 }
 
-/* line 1684, ../sass/main.scss */
+/* line 1692, ../sass/main.scss */
 #buscar input[type="text"] {
   width: 60%;
 }
 @media (max-width: 360px) {
-  /* line 1684, ../sass/main.scss */
+  /* line 1692, ../sass/main.scss */
   #buscar input[type="text"] {
     width: 80%;
   }
 }
 
-/* line 1691, ../sass/main.scss */
+/* line 1699, ../sass/main.scss */
 #menu-categorias-detalle {
   position: fixed;
   width: 100%;
@@ -1925,13 +1935,13 @@ textarea {
   z-index: 10;
 }
 
-/* line 1711, ../sass/main.scss */
+/* line 1719, ../sass/main.scss */
 .menu-separator {
   margin: 7px 0;
   cursor: pointer;
 }
 
-/* line 1716, ../sass/main.scss */
+/* line 1724, ../sass/main.scss */
 .menu-principal {
   order: 0;
   flex: 0 1 auto;
@@ -1939,7 +1949,7 @@ textarea {
   margin-top: 40px !important;
 }
 
-/* line 1723, ../sass/main.scss */
+/* line 1731, ../sass/main.scss */
 .menu-pricipal-item {
   color: #ffff00;
   cursor: pointer;
@@ -1947,12 +1957,12 @@ textarea {
   font-size: 22px;
 }
 
-/* line 1730, ../sass/main.scss */
+/* line 1738, ../sass/main.scss */
 .menu-pricipal-item:hover {
   color: #fff;
 }
 
-/* line 1734, ../sass/main.scss */
+/* line 1742, ../sass/main.scss */
 .menu-categoria-titulo {
   color: #fff;
   margin-top: 40px !important;
@@ -1963,7 +1973,7 @@ textarea {
   font-family: "Myriad Pro Bold Condensed";
 }
 
-/* line 1744, ../sass/main.scss */
+/* line 1752, ../sass/main.scss */
 .menu-subcategoria {
   order: 0;
   flex: 0 1 auto;
@@ -1973,7 +1983,7 @@ textarea {
   text-transform: capitalize;
 }
 
-/* line 1754, ../sass/main.scss */
+/* line 1762, ../sass/main.scss */
 .menu-subcategoria-item {
   color: #fff;
   cursor: pointer;
@@ -1981,24 +1991,24 @@ textarea {
   font-size: 18px;
 }
 
-/* line 1761, ../sass/main.scss */
+/* line 1769, ../sass/main.scss */
 .carrito-imagen {
   background: rgba(0, 0, 0, 0.7) url("../images/carritox2.png") 50% 50% no-repeat;
 }
 
-/* line 1765, ../sass/main.scss */
+/* line 1773, ../sass/main.scss */
 .container-carrito-1 {
   width: 90%;
 }
 
-/* line 1775, ../sass/main.scss */
+/* line 1783, ../sass/main.scss */
 .buscar-clear-image {
   position: relative;
   left: -40px;
   cursor: pointer;
 }
 
-/* line 1781, ../sass/main.scss */
+/* line 1789, ../sass/main.scss */
 .detalle-imagen {
   width: 220px;
   height: 220px;
@@ -2007,7 +2017,7 @@ textarea {
   -webkit-border-radius: 5px;
 }
 
-/* line 1789, ../sass/main.scss */
+/* line 1797, ../sass/main.scss */
 .detalle-titulo {
   color: #8cc63f;
   font-size: 37px;
@@ -2016,40 +2026,40 @@ textarea {
   margin-left: 30px;
 }
 
-/* line 1797, ../sass/main.scss */
+/* line 1805, ../sass/main.scss */
 .div-close {
   float: right;
   position: relative;
   top: -15px;
 }
 @media (max-width: 360px) {
-  /* line 1797, ../sass/main.scss */
+  /* line 1805, ../sass/main.scss */
   .div-close {
     top: -325px;
   }
 }
 @media (min-width: 361px) and (max-width: 800px) {
-  /* line 1797, ../sass/main.scss */
+  /* line 1805, ../sass/main.scss */
   .div-close {
     top: -280px;
   }
 }
 
-/* line 1809, ../sass/main.scss */
+/* line 1817, ../sass/main.scss */
 .div-close-contacto {
   position: absolute;
   top: 115px;
   right: 15px;
 }
 
-/* line 1815, ../sass/main.scss */
+/* line 1823, ../sass/main.scss */
 .div-close-busqueda {
   position: absolute;
   top: 2px;
   right: 2px;
 }
 
-/* line 1821, ../sass/main.scss */
+/* line 1829, ../sass/main.scss */
 .div-detalle {
   min-height: 250px;
   font-size: 22px;
@@ -2057,13 +2067,13 @@ textarea {
   line-height: 26px;
 }
 
-/* line 1829, ../sass/main.scss */
+/* line 1837, ../sass/main.scss */
 .div-button {
   bottom: 10px;
   float: right;
 }
 @media (max-width: 700px) {
-  /* line 1829, ../sass/main.scss */
+  /* line 1837, ../sass/main.scss */
   .div-button {
     position: static;
     float: right;
@@ -2071,7 +2081,7 @@ textarea {
   }
 }
 
-/* line 1844, ../sass/main.scss */
+/* line 1852, ../sass/main.scss */
 .transition-pane-animation.ng-enter,
 .transition-pane-animation.ng-leave {
   -webkit-transition: 0.5s linear all;
@@ -2080,29 +2090,29 @@ textarea {
   transition: 0.5s linear all;
 }
 
-/* line 1852, ../sass/main.scss */
+/* line 1860, ../sass/main.scss */
 .transition-pane-animation.ng-enter {
   z-index: 100;
   opacity: 0;
 }
 
-/* line 1857, ../sass/main.scss */
+/* line 1865, ../sass/main.scss */
 .transition-pane-animation.ng-enter.ng-enter-active {
   opacity: 1;
 }
 
-/* line 1861, ../sass/main.scss */
+/* line 1869, ../sass/main.scss */
 .transition-pane-animation.ng-leave {
   z-index: 101;
   opacity: 1;
 }
 
-/* line 1866, ../sass/main.scss */
+/* line 1874, ../sass/main.scss */
 .transition-pane-animation.ng-leave.ng-leave-active {
   opacity: 0;
 }
 
-/* line 1870, ../sass/main.scss */
+/* line 1878, ../sass/main.scss */
 .container-oferta {
   display: flex;
   flex-direction: row;
@@ -2114,19 +2124,19 @@ textarea {
   -webkit-border-radius: 3px;
 }
 @media (max-width: 700px) {
-  /* line 1870, ../sass/main.scss */
+  /* line 1878, ../sass/main.scss */
   .container-oferta {
     flex-direction: column;
   }
 }
 
-/* line 1884, ../sass/main.scss */
+/* line 1892, ../sass/main.scss */
 .container-oferta-imagen, .container-oferta-producto {
   margin: 0 15px;
 }
 
 @media (max-width: 800px) {
-  /* line 1888, ../sass/main.scss */
+  /* line 1896, ../sass/main.scss */
   .container-oferta-producto {
     width: 100%;
     height: 100%;
@@ -2137,14 +2147,14 @@ textarea {
     align-items: center;
     justify-content: space-between;
   }
-  /* line 1899, ../sass/main.scss */
+  /* line 1907, ../sass/main.scss */
   .container-oferta-producto .oferta-titulo,
   .container-oferta-producto .oferta-descripcion {
     text-align: center;
   }
 }
 
-/* line 1907, ../sass/main.scss */
+/* line 1915, ../sass/main.scss */
 .oferta-imagen {
   width: 300px;
   height: 300px;
@@ -2153,7 +2163,7 @@ textarea {
   padding: 3px;
 }
 @media (max-width: 700px) {
-  /* line 1907, ../sass/main.scss */
+  /* line 1915, ../sass/main.scss */
   .oferta-imagen {
     width: 150px;
     height: 150px;
@@ -2161,7 +2171,7 @@ textarea {
   }
 }
 
-/* line 1922, ../sass/main.scss */
+/* line 1930, ../sass/main.scss */
 .oferta-titulo {
   text-align: center;
   font-size: 50px;
@@ -2173,7 +2183,7 @@ textarea {
   display: flex;
 }
 @media (max-width: 700px) {
-  /* line 1922, ../sass/main.scss */
+  /* line 1930, ../sass/main.scss */
   .oferta-titulo {
     font-size: 28px;
     min-height: 0px;
@@ -2181,7 +2191,7 @@ textarea {
   }
 }
 
-/* line 1939, ../sass/main.scss */
+/* line 1947, ../sass/main.scss */
 .oferta-descripcion {
   text-align: left;
   font-family: "Myriad Pro Condensed", serif;
@@ -2192,7 +2202,7 @@ textarea {
   margin-bottom: 10px;
 }
 @media (max-width: 700px) {
-  /* line 1939, ../sass/main.scss */
+  /* line 1947, ../sass/main.scss */
   .oferta-descripcion {
     font-size: 21px;
     height: 75px;
@@ -2201,20 +2211,20 @@ textarea {
   }
 }
 
-/* line 1957, ../sass/main.scss */
+/* line 1965, ../sass/main.scss */
 .btn-oferta {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 @media (max-width: 700px) {
-  /* line 1957, ../sass/main.scss */
+  /* line 1965, ../sass/main.scss */
   .btn-oferta {
     justify-content: center;
   }
 }
 
-/* line 1966, ../sass/main.scss */
+/* line 1974, ../sass/main.scss */
 .btn-info-big {
   width: 50px;
   height: 50px;
@@ -2222,7 +2232,7 @@ textarea {
   background-size: 100%;
 }
 
-/* line 1973, ../sass/main.scss */
+/* line 1981, ../sass/main.scss */
 .btn-info-big:hover {
   width: 50px;
   height: 50px;
@@ -2232,7 +2242,7 @@ textarea {
 }
 
 @media (max-width: 700px) {
-  /* line 1982, ../sass/main.scss */
+  /* line 1990, ../sass/main.scss */
   .oferta-top {
     display: flex;
     flex-direction: column;
@@ -2240,14 +2250,14 @@ textarea {
     align-items: center;
   }
 }
-/* line 1990, ../sass/main.scss */
+/* line 1998, ../sass/main.scss */
 .oferta-bottom {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-/* line 1996, ../sass/main.scss */
+/* line 2004, ../sass/main.scss */
 .slider_1, .slider_2, .slider_3, .slider_4 {
   border: 2px solid #fff;
   border-radius: 10px;
@@ -2257,13 +2267,13 @@ textarea {
   margin: 10px;
 }
 
-/* line 2005, ../sass/main.scss */
+/* line 2013, ../sass/main.scss */
 .slider_selected {
   background-color: #8CC63F;
   border: 2px solid #8CC63F;
 }
 
-/* line 2010, ../sass/main.scss */
+/* line 2018, ../sass/main.scss */
 .ac-item-list {
   background-color: #8CC63F;
   color: #fff;
@@ -2271,17 +2281,17 @@ textarea {
   cursor: pointer;
 }
 
-/* line 2017, ../sass/main.scss */
+/* line 2025, ../sass/main.scss */
 .ac-item-list:hover {
   color: #ffff00;
 }
 
-/* line 2021, ../sass/main.scss */
+/* line 2029, ../sass/main.scss */
 .ac-item-selected-list {
   cursor: pointer;
 }
 
-/* line 2025, ../sass/main.scss */
+/* line 2033, ../sass/main.scss */
 .container-legales {
   font-size: 20px;
   font-family: "Myriad Pro Condensed";
@@ -2291,18 +2301,18 @@ textarea {
   text-align: justify;
 }
 
-/* line 2038, ../sass/main.scss */
+/* line 2046, ../sass/main.scss */
 .form-control-carrito {
   width: 165px;
 }
 
-/* line 2042, ../sass/main.scss */
+/* line 2050, ../sass/main.scss */
 #oferta-bottom {
   position: absolute;
   bottom: 0;
 }
 
-/* line 2047, ../sass/main.scss */
+/* line 2055, ../sass/main.scss */
 .oferta-top {
   position: relative;
   width: 100%;
@@ -2311,28 +2321,28 @@ textarea {
   overflow: hidden;
 }
 
-/* line 2055, ../sass/main.scss */
+/* line 2063, ../sass/main.scss */
 .container-oferta {
   width: 99%;
   position: absolute;
   top: 0;
 }
 
-/* line 2061, ../sass/main.scss */
+/* line 2069, ../sass/main.scss */
 .container-main-ofertas {
   background-color: transparent;
   border: 0;
   max-width: 800px;
 }
 
-/* line 2067, ../sass/main.scss */
+/* line 2075, ../sass/main.scss */
 .container-oferta.ng-enter {
   -webkit-animation: ofertas-container-enter 1s;
   -o-animation: ofertas-container-enter 1s;
   animation: ofertas-container-enter 1s;
 }
 
-/* line 2073, ../sass/main.scss */
+/* line 2081, ../sass/main.scss */
 .container-oferta.ng-leave {
   -webkit-animation: ofertas-container-leave 1s;
   -o-animation: ofertas-container-leave 1s;
@@ -2359,18 +2369,18 @@ textarea {
     transform: translate(0px, 500px);
   }
 }
-/* line 2102, ../sass/main.scss */
+/* line 2110, ../sass/main.scss */
 a.recovery-pwd {
   text-decoration: none;
   color: #8cc63f;
 }
 
-/* line 2107, ../sass/main.scss */
+/* line 2115, ../sass/main.scss */
 span {
   color: #fff;
 }
 
-/* line 2111, ../sass/main.scss */
+/* line 2119, ../sass/main.scss */
 input[type='checkbox'] {
   width: 25px;
   height: 25px;
@@ -2378,7 +2388,7 @@ input[type='checkbox'] {
   border: 2px solid #fff;
 }
 
-/* line 2117, ../sass/main.scss */
+/* line 2125, ../sass/main.scss */
 .message-error {
   color: orange;
   font-size: 28px;
@@ -2387,12 +2397,12 @@ input[type='checkbox'] {
   padding: 0 5%;
 }
 
-/* line 2124, ../sass/main.scss */
+/* line 2132, ../sass/main.scss */
 .input-error {
   border: 2px solid orange;
 }
 
-/* line 2130, ../sass/main.scss */
+/* line 2138, ../sass/main.scss */
 .container-legales-content {
   min-height: 370px;
   width: 690px;
@@ -2403,13 +2413,13 @@ input[type='checkbox'] {
   padding: 25px 0;
 }
 @media (max-width: 800px) {
-  /* line 2130, ../sass/main.scss */
+  /* line 2138, ../sass/main.scss */
   .container-legales-content {
     width: 99%;
   }
 }
 
-/* line 2143, ../sass/main.scss */
+/* line 2151, ../sass/main.scss */
 .div-legal-close {
   float: right;
   position: relative;
@@ -2417,52 +2427,52 @@ input[type='checkbox'] {
   right: 10px;
 }
 
-/* line 2150, ../sass/main.scss */
+/* line 2158, ../sass/main.scss */
 .title-font-legales {
   font-family: "Myriad Pro Bold Condensed";
   font-size: 71px;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
 }
 @media (max-width: 700px) {
-  /* line 2150, ../sass/main.scss */
+  /* line 2158, ../sass/main.scss */
   .title-font-legales {
     font-size: 60px;
   }
 }
 
-/* line 2158, ../sass/main.scss */
+/* line 2166, ../sass/main.scss */
 .btn-margin-right {
   margin-right: 20%;
 }
 @media (max-width: 800px) {
-  /* line 2158, ../sass/main.scss */
+  /* line 2166, ../sass/main.scss */
   .btn-margin-right {
     margin-right: 7px;
   }
 }
 
 @media (max-width: 800px) {
-  /* line 2166, ../sass/main.scss */
+  /* line 2174, ../sass/main.scss */
   .btn-big {
     margin: 5px;
   }
 
-  /* line 2169, ../sass/main.scss */
+  /* line 2177, ../sass/main.scss */
   .container-carrito {
     margin: 0 5px;
   }
 
-  /* line 2172, ../sass/main.scss */
+  /* line 2180, ../sass/main.scss */
   .div-input-cantidad {
     width: 6%;
   }
 
-  /* line 2175, ../sass/main.scss */
+  /* line 2183, ../sass/main.scss */
   .carrito-table-row-name {
     width: 33%;
   }
 
-  /* line 2178, ../sass/main.scss */
+  /* line 2186, ../sass/main.scss */
   .container-datos {
     margin: 0 5px;
     display: flex;
@@ -2470,7 +2480,7 @@ input[type='checkbox'] {
     align-items: center;
   }
 
-  /* line 2184, ../sass/main.scss */
+  /* line 2192, ../sass/main.scss */
   .container-pwd {
     margin: 15px 5px 0 5px;
     display: flex;
@@ -2478,43 +2488,43 @@ input[type='checkbox'] {
     align-items: center;
   }
 
-  /* line 2190, ../sass/main.scss */
+  /* line 2198, ../sass/main.scss */
   .form-message {
     margin-top: 0;
   }
 
-  /* line 2193, ../sass/main.scss */
+  /* line 2201, ../sass/main.scss */
   .contacto-content {
     width: 99%;
   }
 
-  /* line 2196, ../sass/main.scss */
+  /* line 2204, ../sass/main.scss */
   .div-close-contacto {
     right: 4%;
   }
 
-  /* line 2200, ../sass/main.scss */
+  /* line 2208, ../sass/main.scss */
   .container-datos-1, .container-datos-2, .container-datos-3 {
     flex-direction: column !important;
   }
 }
 @media (min-width: 480px) and (max-width: 800px) {
-  /* line 2206, ../sass/main.scss */
+  /* line 2214, ../sass/main.scss */
   .container-datos, .container-pwd {
     min-height: 445px;
   }
 
-  /* line 2209, ../sass/main.scss */
+  /* line 2217, ../sass/main.scss */
   .container-pwd {
     margin-top: 0;
   }
 }
-/* line 2214, ../sass/main.scss */
+/* line 2222, ../sass/main.scss */
 .container-interno {
   flex-direction: column;
 }
 
-/* line 2217, ../sass/main.scss */
+/* line 2225, ../sass/main.scss */
 .container-datos-1, .container-datos-2, .container-datos-3 {
   width: 100%;
   flex-direction: row;
@@ -2522,12 +2532,12 @@ input[type='checkbox'] {
   justify-content: center;
 }
 
-/* line 2223, ../sass/main.scss */
+/* line 2231, ../sass/main.scss */
 .form-control-space {
   margin: 0 5px;
 }
 
-/* line 2226, ../sass/main.scss */
+/* line 2234, ../sass/main.scss */
 .pwd-interno {
   width: 100%;
   flex-direction: column;
@@ -2537,12 +2547,12 @@ input[type='checkbox'] {
   align-items: center;
 }
 
-/* line 2234, ../sass/main.scss */
+/* line 2242, ../sass/main.scss */
 .bayres-display {
   display: inline !important;
 }
 
-/* line 2237, ../sass/main.scss */
+/* line 2245, ../sass/main.scss */
 .control-group {
   display: flex;
   flex-direction: row;
@@ -2554,13 +2564,13 @@ input[type='checkbox'] {
   width: 100%;
 }
 @media (max-width: 360px) {
-  /* line 2237, ../sass/main.scss */
+  /* line 2245, ../sass/main.scss */
   .control-group {
     flex-direction: column;
   }
 }
 
-/* line 2251, ../sass/main.scss */
+/* line 2259, ../sass/main.scss */
 .form-checkbox {
   width: 298px;
   display: flex;
@@ -2571,17 +2581,17 @@ input[type='checkbox'] {
 }
 
 @media (max-width: 360px) {
-  /* line 2260, ../sass/main.scss */
+  /* line 2268, ../sass/main.scss */
   .botonera.botonera-micuenta > button {
     font-size: 14px;
   }
 
-  /* line 2263, ../sass/main.scss */
+  /* line 2271, ../sass/main.scss */
   .botonera.botonera-micuenta > span {
     font-size: 20px;
   }
 }
-/* line 2267, ../sass/main.scss */
+/* line 2275, ../sass/main.scss */
 .micarrito-container {
   max-height: 110px;
   overflow-y: auto;
@@ -2589,13 +2599,13 @@ input[type='checkbox'] {
   margin-top: 5px;
 }
 
-/* line 2273, ../sass/main.scss */
+/* line 2281, ../sass/main.scss */
 .bottom-control {
   display: flex;
   align-items: flex-end;
 }
 
-/* line 2277, ../sass/main.scss */
+/* line 2285, ../sass/main.scss */
 .message-confirm {
   width: 100%;
   position: fixed;
@@ -2607,17 +2617,17 @@ input[type='checkbox'] {
   overflow: hidden;
 }
 
-/* line 2292, ../sass/main.scss */
+/* line 2300, ../sass/main.scss */
 .no-show-message {
   visibility: hidden;
 }
 
-/* line 2296, ../sass/main.scss */
+/* line 2304, ../sass/main.scss */
 .show-message {
   visibility: visible !important;
 }
 
-/* line 2300, ../sass/main.scss */
+/* line 2308, ../sass/main.scss */
 .confirm-container {
   margin-left: 30% !important;
   text-align: center;
@@ -2635,7 +2645,7 @@ input[type='checkbox'] {
   font-size: 22px;
 }
 
-/* line 2318, ../sass/main.scss */
+/* line 2326, ../sass/main.scss */
 .animated {
   -webkit-animation-fill-mode: both;
   -moz-animation-fill-mode: both;
@@ -2721,7 +2731,7 @@ input[type='checkbox'] {
     -webkit-transform: translateX(20px);
   }
 }
-/* line 2404, ../sass/main.scss */
+/* line 2412, ../sass/main.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   -moz-animation-name: fadeInLeft;
@@ -2729,7 +2739,7 @@ input[type='checkbox'] {
   animation-name: fadeInLeft;
 }
 
-/* line 2411, ../sass/main.scss */
+/* line 2419, ../sass/main.scss */
 .select-envios, .select-sucursales {
   display: inline !important;
 }

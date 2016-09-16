@@ -562,6 +562,10 @@ button, input{
 #sucursal2 {
   background: url(../images/sucursales_02.png) top center no-repeat;
   //background-color: yellow;
+  @media (max-width: 880px){
+    background: url(../images/sucursales_02M.png) top center no-repeat;
+  }
+
 }
 
 #sucursal3 {
@@ -735,12 +739,13 @@ AGREEMENT
   font-size: 50px;
   position: relative;
   line-height: 55px;
-  color: lightgray;
+  color: black;
   margin-top: 30px;
   text-align: center;
   @media (max-width: 360px) {
     font-size: 45px;
     margin-top: 0px;
+    padding: 10px;
   }
 }
 
@@ -756,7 +761,10 @@ AGREEMENT
   margin-right: 8%;
   text-align: center;
   @media (max-width: 360px) {
+    padding: 10px!important;
     font-size: 16px;
+    font-weight: lighter;
+    text-align: left!important;
   }
 }
 
