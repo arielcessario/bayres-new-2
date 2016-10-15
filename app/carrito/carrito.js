@@ -24,6 +24,9 @@
         //  VARIABLES
         var vm = this;
         vm.message = '';
+        vm.detalle = '';
+        vm.showMensaje = false;
+        vm.index = -1;
         vm.carritoDetalles = [];
         vm.sucursales = [];
         vm.tipoEnvios = [
@@ -49,6 +52,8 @@
         vm.removeProducto = removeProducto;
         vm.refreshProducto = refreshProducto;
         vm.confirmCarrito = confirmCarrito;
+        vm.getDetalle = getDetalle;
+        vm.cancelar = cancelar;
 
 
         //*******************************************************************
@@ -68,11 +73,23 @@
             vm.carritoInfo.totalAPagar = (CartVars.carrito.length > 0) ? CartVars.carrito_total() : BayresService.carrito_total();
         });
 
+        function cancelar() {
+            vm.index = -1;
+            vm.detalle = '';
+            vm.showMensaje = false;
+        }
+
+        function getDetalle(index) {
+            vm.index = index;
+            var producto = (CartVars.carrito.length > 0) ? CartVars.carrito[index] : BayresService.carrito[index];
+            vm.detalle = producto.nombre + ' $' + producto.precio_unitario + '(x' + producto.cantidad + ')';
+        }
+
         function removeProducto(index) {
             var producto = (CartVars.carrito.length > 0) ? CartVars.carrito[index] : BayresService.carrito[index];
-            var detalle = producto.nombre + ' $' + producto.precio_unitario + '(x' + producto.cantidad + ')';
-            var borrarOk = confirm('¿Desea borrar el producto '+ detalle +'?');
-            if(borrarOk){
+            //var detalle = producto.nombre + ' $' + producto.precio_unitario + '(x' + producto.cantidad + ')';
+            //var borrarOk = confirm('¿Desea borrar el producto '+ detalle +'?');
+            //if(borrarOk){
                 var carrito_detalle_ids = [];
                 carrito_detalle_ids.push(producto.carrito_detalle_id);
                 CartService.removeFromCart(carrito_detalle_ids, function(data){
@@ -81,6 +98,7 @@
                         CartService.update(BayresService.miCarrito, function(miCarrito){
                             if(miCarrito) {
                                 BayresService.messageConfirm = 'Se quito el producto';
+                                cancelar();
                             } else {
                                 BayresService.messageConfirm = 'Error borrando el producto';
                             }
@@ -92,9 +110,9 @@
                         BayresService.showMessageConfirm = true;
                     }
                 });
-            } else {
-                return;
-            }
+            //} else {
+            //    return;
+            //}
         }
 
         function calcularCarritoTotal() {

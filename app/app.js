@@ -179,7 +179,6 @@ window.appName = 'bayres';
 
             vm.messageConfirm = BayresService.messageConfirm;
             vm.showMessageConfirm = BayresService.showMessageConfirm;
-
         });
 
 
@@ -208,15 +207,15 @@ window.appName = 'bayres';
         }
 
         function goTo(location) {
-            if (location.path === '/main') {
+            if(location.nombre === 'INICIO') {
+                clearFiltro();
+            } else if (location.path === '/main') {
                 LinksService.selectedIncludeTop = 'main/ofertas.html';
                 LinksService.selectedIncludeMiddle = 'main/destacados.html';
                 LinksService.selectedIncludeBottom = 'main/masvendidos.html';
-
                 //vm.filtro = '';
                 //BayresService.productos = [];
                 //BayresService.search = false;
-
             } else if (location.path === '/categoria') {
                 LinksService.selectedIncludeTop = 'login/login.html';
             } else if (location.path === '/carrito') {
