@@ -117,6 +117,7 @@ function MainController($scope, $interval, $location, AcUtils, UserService,
     }
 
     function addProducto(producto) {
+        vm.agregado = true;
 
         if (UserService.getFromToken() != false) {
             if(BayresService.tieneCarrito) {
@@ -138,6 +139,7 @@ function MainController($scope, $interval, $location, AcUtils, UserService,
                                         if(carritoActualizado) {
                                             BayresService.messageConfirm = 'Producto agregado al carrito';
                                             BayresService.showMessageConfirm = true;
+                                            vm.agregado = false;
                                             CartVars.broadcast();
                                         } else {
                                             BayresService.messageConfirm = 'Error agregando el producto';

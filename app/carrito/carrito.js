@@ -47,6 +47,8 @@
         vm.tipoEnvioDefecto = vm.tipoEnvios[0];
         vm.lugarDeEnvioDefecto = vm.lugarDeEnvios[0];
 
+        vm.confirmado = true;
+
         //*******************************************************************
         //  FUNCIONES
         vm.removeProducto = removeProducto;

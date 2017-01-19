@@ -89,6 +89,10 @@
                             if(exist == -1) {
                                 UserService.create(vm.userForm, function (data) {
                                     console.log(data);
+                                    UserService.welcome(vm.userForm.mail, function(data){
+                                        console.log(data);
+                                    });
+
                                     if(data != -1) {
                                         UserService.login(vm.userForm.mail.trim(), vm.userForm.password.trim(), 1, function(data) {
                                             if (data != -1) {

@@ -38,11 +38,11 @@ window.appName = 'bayres';
 
     BayresController.$inject = ['$scope', '$location', 'UserService', 'ProductService',
         'CategoryService', 'LinksService', 'CartVars', 'AcUtils', '$rootScope',
-        'BayresService', '$timeout', '$document', 'CartService'];
+        'BayresService', '$timeout', '$document', 'CartService', '$cookies'];
 
     function BayresController($scope, $location, UserService, ProductService,
                               CategoryService, LinksService, CartVars, AcUtils,
-                              $rootScope, BayresService, $timeout, $document, CartService) {
+                              $rootScope, BayresService, $timeout, $document, CartService, $cookies) {
 
         var vm = this;
         vm.filtro = '';
@@ -51,7 +51,7 @@ window.appName = 'bayres';
         vm.selectedIncludeTop = 'main/ofertas.html';
         vm.selectedIncludeMiddle = 'main/destacados.html';
         vm.selectedIncludeBottom = 'main/masvendidos.html';
-        vm.selectedAgreement = '/agreement/agreement.html';
+        vm.selectedAgreement = './agreement/agreement.html';
         vm.agreement = LinksService.agreement;
         vm.menu_mobile_open = false;
         vm.showCategorias = false;
@@ -156,7 +156,7 @@ window.appName = 'bayres';
             vm.messageConfirm = BayresService.messageConfirm;
             vm.showMessageConfirm = BayresService.showMessageConfirm;
 
-            if(vm.showMessageConfirm) {
+            if(vm.showMessageConfirm != false) {
                 $timeout(function () {
                     vm.showMessageConfirm = false;
                     BayresService.showMessageConfirm = false;
@@ -179,6 +179,12 @@ window.appName = 'bayres';
 
             vm.messageConfirm = BayresService.messageConfirm;
             vm.showMessageConfirm = BayresService.showMessageConfirm;
+            if(vm.showMessageConfirm != false) {
+                $timeout(function () {
+                    vm.showMessageConfirm = false;
+                    BayresService.showMessageConfirm = false;
+                }, 5000);
+            }
         });
 
 

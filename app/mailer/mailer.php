@@ -41,7 +41,7 @@ function sendConsulta($contactoForm)
     $mail->Host = 'gator4184.hostgator.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'ventas@ac-desarrollos.com';                 // SMTP username
-    $mail->Password = 'ventas';                           // SMTP password
+    $mail->Password = 'ventas0_*020ventas';                           // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;
 
@@ -93,7 +93,7 @@ function sendCancelarCarritoComprador($usuario, $carrito)
     $mail->Host = 'gator4184.hostgator.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'ventas@ac-desarrollos.com';                 // SMTP username
-    $mail->Password = 'ventas';                           // SMTP password
+    $mail->Password = 'ventas0_*020ventas';                           // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;
 
@@ -150,7 +150,7 @@ function sendCancelarCarritoVendedor($usuario, $email, $carrito)
     $mail->Host = 'gator4184.hostgator.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'ventas@ac-desarrollos.com';                 // SMTP username
-    $mail->Password = 'ventas';                           // SMTP password
+    $mail->Password = 'ventas0_*020ventas';                           // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;
 
@@ -249,7 +249,7 @@ function sendCarritoComprador($email, $nombre, $carrito, $sucursal, $direccion, 
     $mail->Host = 'gator4184.hostgator.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'ventas@ac-desarrollos.com';                 // SMTP username
-    $mail->Password = 'ventas';                           // SMTP password
+    $mail->Password = 'ventas0_*020ventas';                           // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;
 
@@ -320,7 +320,7 @@ function sendCarritoVendedor($email, $nombre, $carrito, $sucursal, $direccion, $
     $mail->Host = 'gator4184.hostgator.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'ventas@ac-desarrollos.com';                 // SMTP username
-    $mail->Password = 'ventas';                           // SMTP password
+    $mail->Password = 'ventas0_*020ventas';                           // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;
 

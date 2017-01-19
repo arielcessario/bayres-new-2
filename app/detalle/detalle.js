@@ -92,6 +92,7 @@
         }
 
         function addProducto(producto) {
+            vm.agregado = true;
             if (UserService.getFromToken() != false) {
 
                 if(BayresService.tieneCarrito) {
@@ -114,6 +115,7 @@
 
                                             if(carritoActualizado) {
                                                 BayresService.messageConfirm = 'Se agrego el producto';
+                                                vm.agregado = false;
                                                 BayresService.showMessageConfirm = true;
                                                 CartVars.broadcast();
                                             } else {
