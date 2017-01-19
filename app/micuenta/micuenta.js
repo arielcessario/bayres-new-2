@@ -12,10 +12,10 @@
         .controller('MiCuentaController', MiCuentaController);
 
     MiCuentaController.$inject = ['$scope', '$location', 'UserService', 'CartVars', 'CartService',
-        'AcUtils', 'BayresService', 'UserVars', 'LinksService', 'BayresMailerService', '$routeParams'];
+        'AcUtils', 'BayresService', 'UserVars', 'LinksService', 'BayresMailerService'];
 
     function MiCuentaController($scope, $location, UserService, CartVars, CartService,
-                                AcUtils, BayresService, UserVars, LinksService, BayresMailerService, $routeParams) {
+                                AcUtils, BayresService, UserVars, LinksService, BayresMailerService) {
         var vm = this;
 
         vm.userForm = {
@@ -73,8 +73,7 @@
         vm.getCarritoSelected = getCarritoSelected;
 
 
-        vm.id = $routeParams.id;
-        console.log(vm.id);
+
 
         CartVars.listen(function(){
             vm.userForm.news_letter = (vm.userForm.news_letter == 1) ? true : false;
@@ -123,10 +122,21 @@
                 if(data != -1) {
                     tieneCarrito = true;
                     vm.historico_pedidos = data;
+
                 }
                 var select_one = { pedido_id:-1, fecha:'Seleccione un pedido' };
                 vm.historico_pedidos.unshift(select_one);
-                vm.carrito = vm.historico_pedidos[0];
+
+                if(LinksService.pedidoId != 0 && data != -1){
+                    for(var i in data){
+                        if(data[i].carrito_id == LinksService.pedidoId){
+                            vm.productos = data[i].productos;
+                            getCarritoSelected(data[i]);
+                        }
+                    }
+                }else{
+                    vm.carrito = vm.historico_pedidos[0];
+                }
             });
             if(!tieneCarrito) {
                 var select_one = { pedido_id:-1, fecha:'Seleccione un pedido' };

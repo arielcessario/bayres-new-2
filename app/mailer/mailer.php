@@ -223,7 +223,7 @@ function sendCarritoComprador($email, $nombre, $carrito, $sucursal, $direccion, 
     $message .= '<div style="margin-top:20px;text-align:center;">Gracias por comprar con nosotros.</div>';
     $message .= '<div style="text-align:center;">Abajo encontrara los detalles de la orden de compra.</div>';
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Numero de Pedido: </label>' . $micarrito->carrito_id . '</div>';
-    $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Datos del Pedido: </label>http://192.185.67.199/~arielces/animations/#/commerce/cuenta</div>';
+    $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Datos del Pedido: </label>http://192.185.67.199/~arielces/bayres-new-2/app/#/agreement/'.$micarrito->carrito_id .'</div>';
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Fecha del Pedido: </label>' . $micarrito->fecha . '</div>';
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Contenido del Pedido:</label></div>';
     $message .= '<div style="background:#006837; background:rgba(0,104,55,1); margin:0 auto; padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; min-height: 200px; margin-top:5%;color:#fff;margin-left: 5px;margin-right: 5px;">';
@@ -257,7 +257,7 @@ function sendCarritoComprador($email, $nombre, $carrito, $sucursal, $direccion, 
     //$mail->From = 'info@bayresnoproblem.com.ar'; //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
     $mail->FromName = 'Bayres No Problem';
     $mail->addAddress($email);     // Add a recipient
-    $mail->addAddress('juan.dilello@gmail.com');               // Name is optional
+    $mail->addAddress('arielcessario@gmail.com');               // Name is optional
     $mail->isHTML(true);    // Name is optional
 
     $mail->Subject = 'Detalle de Compra Nro ' . $micarrito->carrito_id;

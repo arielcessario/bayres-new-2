@@ -8,16 +8,21 @@
                 templateUrl: './agreement/agreement.html',
                 controller: 'AgreementController'
             });
+            $routeProvider.when('/agreement/:id', {
+                templateUrl: './agreement/agreement.html',
+                controller: 'AgreementController'
+            });
         }])
         .controller('AgreementController', AgreementController);
 
-    AgreementController.$inject = ['$scope', '$location', '$window', 'LinksService', '$cookies'];
+    AgreementController.$inject = ['$scope', '$location', '$window', 'LinksService', '$cookies', '$routeParams'];
 
-    function AgreementController($scope, $location, $window, LinksService, $cookies) {
+    function AgreementController($scope, $location, $window, LinksService, $cookies, $routeParams) {
         var vm = this;
 
         vm.acepto = acepto;
         vm.noAcepto = noAcepto;
+        vm.id = $routeParams.id;
 
         var agree = $cookies.get('agree');
 
@@ -26,7 +31,13 @@
         }
 
         function acepto() {
-            $location.path('/main');
+            if(vm.id != undefined)
+            {
+                LinksService.pedidoId = vm.id;
+                $location.path('/micuenta');
+            }else{
+                $location.path('/main');
+            }
             LinksService.agreement = false;
             LinksService.showPage = true;
             $cookies.put('agree', (new Date()).getTime());

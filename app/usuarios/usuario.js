@@ -181,17 +181,17 @@
                 return;
             }
             if(vm.userForm.telefono.trim().length == 0) {
-                vm.message = "El Tel�fono es Obligatorio";
+                vm.message = "El Teléfono es Obligatorio";
                 vm.error_code = 4;
                 return;
             }
             if(!validatePhoneNumber(vm.userForm.telefono.trim())) {
-                vm.message = "El Tel�fono no tiene un formato valido";
+                vm.message = "El Teléfono no tiene un formato valido";
                 vm.error_code = 4;
                 return;
             }
             if(vm.userForm.calle.trim().length == 0 || vm.userForm.nro.trim().length == 0) {
-                vm.message = "La direcci�n y el numero son Obligatorias";
+                vm.message = "La dirección y el numero son Obligatorias";
                 vm.error_code = 5;
                 return;
             }
@@ -216,7 +216,7 @@
                 return;
             }
             if(vm.userForm.password.trim().length == 0) {
-                vm.message = "La Contrase�a es Obligatoria";
+                vm.message = "La Contraseña es Obligatoria";
                 vm.error_code = 8;
                 return;
             }
@@ -239,12 +239,13 @@
          */
         function validatePhoneNumber(phoneno) {
             //var RegExPattern = /^(\()?\d{3}(\))?(-|\s)?\d{3}(-|\s)\d{4}$/;
-            var RegExPattern = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
-            if(phoneno.match(RegExPattern)) {
-                return true;
-            } else {
-                return false;
-            }
+            // var RegExPattern = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+            // if(phoneno.match(RegExPattern)) {
+            //     return true;
+            // } else {
+            //     return false;
+            // }
+            return true;
         }
 
         /**
