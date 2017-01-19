@@ -12,10 +12,10 @@
         .controller('MiCuentaController', MiCuentaController);
 
     MiCuentaController.$inject = ['$scope', '$location', 'UserService', 'CartVars', 'CartService',
-        'AcUtils', 'BayresService', 'UserVars', 'LinksService', 'BayresMailerService'];
+        'AcUtils', 'BayresService', 'UserVars', 'LinksService', 'BayresMailerService', '$routeParams'];
 
     function MiCuentaController($scope, $location, UserService, CartVars, CartService,
-                                AcUtils, BayresService, UserVars, LinksService, BayresMailerService) {
+                                AcUtils, BayresService, UserVars, LinksService, BayresMailerService, $routeParams) {
         var vm = this;
 
         vm.userForm = {
@@ -72,6 +72,9 @@
         vm.addProducto = addProducto;
         vm.getCarritoSelected = getCarritoSelected;
 
+
+        vm.id = $routeParams.id;
+        console.log(vm.id);
 
         CartVars.listen(function(){
             vm.userForm.news_letter = (vm.userForm.news_letter == 1) ? true : false;
