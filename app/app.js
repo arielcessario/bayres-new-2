@@ -223,7 +223,7 @@ window.appName = 'bayres';
                 //BayresService.productos = [];
                 //BayresService.search = false;
             } else if (location.path === '/categoria') {
-                LinksService.selectedIncludeTop = 'login/login.html';
+               // LinksService.selectedIncludeTop = 'login/login.html';
             } else if (location.path === '/carrito') {
                 LinksService.selectedIncludeTop = 'carrito/carrito.html';
             } else if (location.path === '/micuenta') {
