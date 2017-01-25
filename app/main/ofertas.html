@@ -14,9 +14,11 @@
                     <div class="oferta-descripcion">{{mainCtrl.productosEnOfertas[0].descripcion.substring(0, 149) + "..."}}</div>
                     <div class="btn-oferta">
                         <div class="btn-carrigo-big div-button" ng-click="mainCtrl.addProducto(mainCtrl.productosEnOfertas[0]);">
+                            <div style="margin-left: 5px; margin-top: 5px; width: 100%; text-align: left">
                             <span class="producto-peso-big">$</span>
                             <span class="producto-precio-big" style="margin-right:25px;color:#fff">
                                 {{mainCtrl.productosEnOfertas[0].precios[0].precio}}</span>
+                        </div>
                         </div>
                         <div class="btn-info-big" ng-click="mainCtrl.showDetalle(mainCtrl.productosEnOfertas[0].producto_id); bayresCtrl.goToAnchor('section-2', 'section-2');"></div>
                     </div>
@@ -35,9 +37,12 @@
                     <div class="oferta-descripcion">{{mainCtrl.productosEnOfertas[1].descripcion.substring(0, 149) + "..."}}</div>
                     <div class="btn-oferta">
                         <div class="btn-carrigo-big div-button" ng-click="mainCtrl.addProducto(mainCtrl.productosEnOfertas[1]);">
+                            <div style="margin-left: 5px; margin-top: 5px; width: 100%; text-align: left">
+
                             <span class="producto-peso-big">$</span>
                             <span class="producto-precio-big" style="margin-right:25px;color:#fff">
                                 {{mainCtrl.productosEnOfertas[1].precios[0].precio}}</span>
+                        </div>
                         </div>
                         <div class="btn-info-big" ng-click="mainCtrl.showDetalle(mainCtrl.productosEnOfertas[1].producto_id); bayresCtrl.goToAnchor('seccion-2', 'seccion-2');"></div>
                     </div>
@@ -77,9 +82,11 @@
                     <div class="oferta-descripcion">{{mainCtrl.productosEnOfertas[3].descripcion.substring(0, 149) + "..."}}</div>
                     <div class="btn-oferta">
                         <div class="btn-carrigo-big div-button" ng-click="mainCtrl.addProducto(mainCtrl.productosEnOfertas[3]);">
+                            <div style="margin-left: 5px; margin-top: 5px; width: 100%; text-align: left">
                             <span class="producto-peso-big">$</span>
                             <span class="producto-precio-big" style="margin-right:25px;color:#fff">
                                 {{mainCtrl.productosEnOfertas[3].precios[0].precio}}</span>
+                        </div>
                         </div>
                         <div class="btn-info-big" ng-click="mainCtrl.showDetalle(mainCtrl.productosEnOfertas[3].producto_id); bayresCtrl.goToAnchor('seccion-2', 'seccion-2');"></div>
                     </div>

@@ -12,7 +12,9 @@
                              alt="{{producto.nombre}}"/>
                         <div class="producto-botones">
                             <div class="btn-carrito" ng-click="mainCtrl.addProducto(producto);">
+                                <div style="margin-left: 5px; margin-top: 5px; width: 100%; text-align: left">
                                 <span class="producto-peso">$</span><span class="producto-precio">{{producto.precios[0].precio}}</span>
+                            </div>
                             </div>
                             <div class="btn-info" ng-click="mainCtrl.showDetalle(producto.producto_id);"></div>
                         </div>
