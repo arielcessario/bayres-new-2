@@ -18,7 +18,7 @@
                         <input class="carrito-table-row div-input" ng-change="(producto.cantidad < 0) ? producto.cantidad = 0 : producto.cantidad; carritoCtrl.refreshProducto(producto);"
                                type="number" ng-model="producto.cantidad" style=""/>
                         <div class="carrito-table-row table-row-image">
-                            <a href="" ng-click="carritoCtrl.showSubTotal(producto);">
+                            <a href="" ng-click="carritoCtrl.showSubTotal(producto);carritoCtrl.showDetalle(producto.producto_id);bayresCtrl.goToAnchor('section-2', 'section-2');">
                                 <img src="images/lupa.png" class="div-image-small" title="SubTotal: ${{producto.precio_unitario * producto.cantidad}}" />
                             </a>
                         </div>

@@ -56,6 +56,7 @@
         vm.confirmCarrito = confirmCarrito;
         vm.getDetalle = getDetalle;
         vm.cancelar = cancelar;
+        vm.showDetalle = showDetalle;
 
 
         //*******************************************************************
@@ -201,8 +202,16 @@
                 BayresService.messageConfirm = 'El Carrito esta vacio. Por favor agregue productos';
                 BayresService.showMessageConfirm = true;
             }
+        }
 
+        function showDetalle(id) {
+            LinksService.productId = id;
+            LinksService.showCarrito =  true;
+            $location.path('/detalle');
+            LinksService.selectedIncludeTop = 'detalle/detalle.html';
 
+            BayresService.search = vm.search;
+            CartVars.broadcast();
         }
 
     }

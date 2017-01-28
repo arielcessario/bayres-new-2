@@ -504,6 +504,7 @@ window.appName = 'bayres';
         this.selectedAgreement = 'agreement/agreement.html';
         this.agreement = true;
         this.showPage = false;
+        this.showCarrito = false;
         this.pedidoId=0;
 
 

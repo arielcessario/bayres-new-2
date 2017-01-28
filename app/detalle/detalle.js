@@ -56,8 +56,14 @@
         });
 
         function close() {
-            $location.path('/main');
-            LinksService.selectedIncludeTop = (vm.search) ? 'main/productos.html' : 'main/ofertas.html';
+            if(LinksService.showCarrito) {
+                $location.path('/carrito');
+                LinksService.selectedIncludeTop = (vm.search) ? '' : 'carrito/carrito.html';
+                LinksService.showCarrito =  false;
+            } else {
+                $location.path('/main');
+                LinksService.selectedIncludeTop = (vm.search) ? 'main/productos.html' : 'main/ofertas.html';
+            }
             LinksService.selectedIncludeMiddle = (vm.search) ? '' : 'main/destacados.html';
             LinksService.selectedIncludeBottom = (vm.search) ? '' : 'main/masvendidos.html';
         }
