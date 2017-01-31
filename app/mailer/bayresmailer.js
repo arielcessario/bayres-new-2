@@ -36,7 +36,7 @@
         function sendMailConsulta(contactoForm, callback) {
             return $http.post('mailer/mailer.php',
                 {
-                    function: 'sendConsulta',
+                    'function': 'sendConsulta',
                     'contactoForm': JSON.stringify(contactoForm)
                 })
                 .success(function (data) {
@@ -57,7 +57,7 @@
         function sendMailCancelarCarritoComprador(usuario, carrito, callback) {
             return $http.post('mailer/mailer.php',
                 {
-                    function: 'sendCancelarCarritoComprador',
+                    'function': 'sendCancelarCarritoComprador',
                     'usuario': usuario,
                     'carrito': JSON.stringify(carrito)
                 })
@@ -80,7 +80,7 @@
         function sendMailCancelarCarritoVendedor(usuario, email, carrito, callback) {
             return $http.post('mailer/mailer.php',
                 {
-                    function: 'sendCancelarCarritoVendedor',
+                    'function': 'sendCancelarCarritoVendedor',
                     'usuario': usuario,
                     'email': email,
                     'carrito': JSON.stringify(carrito)
@@ -105,7 +105,7 @@
         function sendMailCarritoComprador(mail, nombre, carrito, sucursal, direccion, tipoEnvio, lugarDeEnvio, callback) {
             return $http.post('mailer/mailer.php',
                 {
-                    function: 'sendCarritoComprador',
+                    'function': 'sendCarritoComprador',
                     'email': mail,
                     'nombre': nombre,
                     'carrito': JSON.stringify(carrito),
@@ -135,8 +135,8 @@
         function sendMailCarritoVendedor(mail, nombre, carrito, sucursal, direccion, tipoEnvio, lugarDeEnvio, callback) {
             return $http.post('mailer/mailer.php',
                 {
-                    function: 'sendCarritoVendedor',
-                    'email': mail,
+                    'function': 'sendCarritoVendedor',
+                    'email': 'bayresnoproblem@hotmail.com',
                     'nombre': nombre,
                     'carrito': JSON.stringify(carrito),
                     'sucursal': sucursal,
