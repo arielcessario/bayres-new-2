@@ -231,7 +231,7 @@ function sendCarritoComprador($email, $nombre, $carrito, $sucursal, $direccion, 
     $message .= '</table></div>';
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold; font-size:22px;">Subtotal: </label><span style="font-size:20px; color:#006837;">$' . number_format((float)$micarrito->total, 2, '.', '') . '</span></div>';
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold; font-size:22px;">Total: </label><span style="font-size:20px; color:#006837;">$' . number_format((float)$micarrito->total, 2, '.', '') . '</span></div>';
-    $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold; font-size:14px;">Metodos de pago: Contra reembolso, Solo Capital y Gran Buenos Aires.</label></div>';
+    $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold; font-size:14px;">Metodos de pago: tarjetas de crédito, transferencia bancaria, deposito bancario, pago fácil, rapi pago, mercado pago.</label></div>';
     $message .= '<div style="background:#006837; background:rgba(0,104,55,1); padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; margin-top:5%;color:#fff;margin-left: 5px;margin-right: 5px;">';
     $message .= '<div style="font-size:18px; font-weight:bold; margin:10px 0 0 10px;">Direccion de Envio:</div>';
     $message .= '<div style="font-size:16px; margin-left:10px;">'. $nombre .'</div>';
@@ -252,7 +252,7 @@ function sendCarritoComprador($email, $nombre, $carrito, $sucursal, $direccion, 
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;
 
-    $mail->From = 'mmaneff@gmail.com';
+    $mail->From = 'bayresnoproblem@hotmail.com';
     //$mail->From = 'info@bayresnoproblem.com.ar'; //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
     $mail->FromName = 'Bayres No Problem';
     $mail->addAddress($email);     // Add a recipient
