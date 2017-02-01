@@ -161,9 +161,11 @@
             sendMailCarritoComprador(carritoMail.mail, carritoMail.cliente, carritoMail.carrito, carritoMail.sucursal,
                 carritoMail.direccion, carritoMail.tipoEnvio, carritoMail.lugarDeEnvio, function(mailComprador){
                     if(mailComprador) {
+                        console.log('Mensaje enviado a comprador');
                         sendMailCarritoVendedor(carritoMail.mail, carritoMail.cliente, carritoMail.carrito, carritoMail.sucursal,
                             carritoMail.direccion, carritoMail.tipoEnvio, carritoMail.lugarDeEnvio, function(mailVendedor){
-                                callback(mailVendedor);
+                            console.log('Mensaje enviado a vendedor');
+                            callback(mailVendedor);
                             });
                     } else {
                         callback(false);

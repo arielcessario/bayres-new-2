@@ -214,10 +214,9 @@ function sendCarritoComprador($email, $nombre, $carrito, $sucursal, $direccion, 
 
     $message = '<html><body><div style="font-family:Arial,sans-serif;font-size:15px;color:#006837; color:rgb(0,104,55);margin:0 auto; width:635px;">';
     $message .= '<div style="background:#006837; background:rgba(0,104,55,1); border-style:Solid; border-color:#000000; border-color:rgba(0, 0, 0, 1); border-width:1px; left:-14px; top:-7px; width:635px;">';
-    $message .= '<div style="background-image: background-repeat:no-repeat; width:606px; height:176px;"><img src="http://192.185.67.199/~arielces/animations/img/logo.png"></div>';
+    $message .= '<div style="background-image: background-repeat:no-repeat; width:606px; height:176px;"><img src="http://arielcessario.com.ar/~arielces/animations/img/logo.png"></div>';
     $message .= '<div style="text-align:center;color:#fff;">';
-    $message .= '<div>Suc. Once (15-3049-8691) - Suc. Flores (15-6676-2685) - Suc. Almagro (15-3041-2252)</div>';
-    $message .= '<div><a href="info@bayresnoproblem.com.ar" style="text-decoration:none;color:#fff;">info@bayresnoproblem.com.ar</a></div></div>';
+    $message .= '<div>Suc. Once (15-3049-8691) - Suc. Flores (15-6676-2685) - Suc. Almagro (15-3041-2252) - Suc. Liniers (15-6676-2716)</div>';
     $message .= '<div style="color:#000;background:#FFFFFF; background:rgba(255,255,255,1); border-style:Solid; border-color:#000000; border-color:rgba(0,0,0,1); border-width:1px; margin: 40px 10px 0 10px; border-radius:12px; -moz-border-radius: 12px; -webkit-border-radius: 12px;padding-bottom: 35px;">';
     $message .= '<div style="font-weight:bold;text-align:center;font-size:1.5em; margin-top:10px;">Estimado '. $nombre .'</div>';
     $message .= '<div style="margin-top:20px;text-align:center;">Gracias por comprar con nosotros.</div>';
