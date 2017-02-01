@@ -136,7 +136,7 @@
             return $http.post('mailer/mailer.php',
                 {
                     'function': 'sendCarritoVendedor',
-                    'email': 'bayresnoproblem@hotmail.com',
+                    'email': mail,
                     'nombre': nombre,
                     'carrito': JSON.stringify(carrito),
                     'sucursal': sucursal,

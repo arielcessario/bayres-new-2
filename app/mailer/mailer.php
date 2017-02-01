@@ -326,8 +326,7 @@ function sendCarritoVendedor($email, $nombre, $carrito, $sucursal, $direccion, $
 
     $mail->From = $email;
     $mail->FromName = 'Bayres No Problem';
-    $mail->addAddress('mmaneff@gmail.com');     // Add a recipient
-    $mail->addAddress('juan.dilello@gmail.com');               // Name is optional
+    $mail->addAddress('bayresnoproblem@hotmail.com');               // Name is optional
     //$mail->addAddress('info@bayresnoproblem.com.ar'); //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
     $mail->isHTML(true);    // Name is optional
 
