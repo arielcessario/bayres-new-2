@@ -181,7 +181,6 @@ window.appName = 'bayres';
             vm.showMessageConfirm = BayresService.showMessageConfirm;
             if(vm.showMessageConfirm != false) {
                 $timeout(function () {
-                    console.log('listen');
                     vm.showMessageConfirm = false;
                     BayresService.showMessageConfirm = false;
 
@@ -391,15 +390,15 @@ window.appName = 'bayres';
 
             // Para pantallas de 1920x1080 disparo las animaciones en otro momento del scroll
             if(window.innerHeight > 1000){
-                if (scrolltop > 300) { 
-                    tierra1.style.transform = 'translateY(' + (scrolltop * .4 - 160) + 'px) translateZ(0)';
-                    tierra2.style.transform = 'translateY(' + (scrolltop * .6 - 240) + 'px) translateZ(0)';
-                }
-
-                if (scrolltop > 1000) {
-                    roca1.style.transform = 'translateY(' + ((scrolltop * .4) - 440) + 'px) translateZ(0)';
-                    roca2.style.transform = 'translateY(' + ((scrolltop * .6) - 550) + 'px) translateZ(0)';
-                }
+                // if (scrolltop > 300) {
+                //     tierra1.style.transform = 'translateY(' + (scrolltop * .4 - 160) + 'px) translateZ(0)';
+                //     tierra2.style.transform = 'translateY(' + (scrolltop * .6 - 240) + 'px) translateZ(0)';
+                // }
+                //
+                // if (scrolltop > 1000) {
+                //     roca1.style.transform = 'translateY(' + ((scrolltop * .4) - 440) + 'px) translateZ(0)';
+                //     roca2.style.transform = 'translateY(' + ((scrolltop * .6) - 550) + 'px) translateZ(0)';
+                // }
 
                 if (scrolltop > 1500) {
                     lava2.style.transform = 'translateY(' + ((scrolltop * .2 - 360) + 400) + 'px) translateZ(0)';
@@ -413,15 +412,15 @@ window.appName = 'bayres';
             }else{
 
                 // Esto es para pantallas de alto menos a 1000
-                if (scrolltop > 700) {
-                    tierra1.style.transform = 'translateY(' + (scrolltop * .4 - 350) + 'px) translateZ(0)';
-                    tierra2.style.transform = 'translateY(' + (scrolltop * .6 - 450) + 'px) translateZ(0)';
-                }
-
-                if (scrolltop > 1200) {
-                    roca1.style.transform = 'translateY(' + ((scrolltop * .4) - 580) + 'px) translateZ(0)';
-                    roca2.style.transform = 'translateY(' + ((scrolltop * .6) - 780) + 'px) translateZ(0)';
-                }
+                // if (scrolltop > 700) {
+                //     tierra1.style.transform = 'translateY(' + (scrolltop * .4 - 350) + 'px) translateZ(0)';
+                //     tierra2.style.transform = 'translateY(' + (scrolltop * .6 - 450) + 'px) translateZ(0)';
+                // }
+                //
+                // if (scrolltop > 1200) {
+                //     roca1.style.transform = 'translateY(' + ((scrolltop * .4) - 580) + 'px) translateZ(0)';
+                //     roca2.style.transform = 'translateY(' + ((scrolltop * .6) - 780) + 'px) translateZ(0)';
+                // }
 
                 if (scrolltop > 1700) {
                     lava2.style.transform = 'translateY(' + ((scrolltop * .2 - 360) + 400) + 'px) translateZ(0)';
@@ -442,11 +441,11 @@ window.appName = 'bayres';
         //}, false);
 
 
-        var latestKnownScrollY = 0,
-            ticking = false;
+        // var latestKnownScrollY = 0;
+        var ticking = false;
 
         function onScroll() {
-            latestKnownScrollY = window.scrollY;
+            // latestKnownScrollY = window.scrollY;
             requestTick();
         }
 
@@ -460,7 +459,7 @@ window.appName = 'bayres';
         function update() {
             ticking = false;
 
-            var currentScrollY = latestKnownScrollY;
+            // var currentScrollY = latestKnownScrollY;
             parallaxbubbles();
 
         }
