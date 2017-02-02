@@ -159,6 +159,9 @@
                 BayresService.miCarrito.status = 1;
                 BayresService.miCarrito.origen = vm.tipoEnvioDefecto.id;
                 BayresService.miCarrito.destino = (vm.tipoEnvioDefecto.id == 1) ? vm.lugarDeEnvioDefecto.id : vm.sucursal.sucursal_id;
+                BayresService.messageConfirm = 'Muchas gracias por su pedido!';
+                BayresService.showMessageConfirm = true;
+                CartVars.broadcast();
 
                 CartService.update(BayresService.miCarrito, function(carrito){
                     if(carrito) {
@@ -176,11 +179,12 @@
 
                                 BayresMailerService.sendMailConfirmarCarrito(carritoMail, function(data){
                                     if(data) {
-                                        BayresService.messageConfirm = 'Su pedido fue enviado';
+
                                     } else {
                                         BayresService.messageConfirm = 'Error confirmando el carrito';
+                                        BayresService.showMessageConfirm = true;
+                                        CartVars.broadcast();
                                     }
-                                    BayresService.showMessageConfirm = true;
                                 });
 
                             }

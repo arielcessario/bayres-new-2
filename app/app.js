@@ -181,9 +181,14 @@ window.appName = 'bayres';
             vm.showMessageConfirm = BayresService.showMessageConfirm;
             if(vm.showMessageConfirm != false) {
                 $timeout(function () {
+                    console.log('listen');
                     vm.showMessageConfirm = false;
                     BayresService.showMessageConfirm = false;
-                }, 500);
+
+                    if(!$scope.$$phase){
+                        $scope.$apply();
+                    }
+                }, 800);
             }
         });
 
