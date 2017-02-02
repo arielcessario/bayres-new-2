@@ -183,7 +183,7 @@ window.appName = 'bayres';
                 $timeout(function () {
                     vm.showMessageConfirm = false;
                     BayresService.showMessageConfirm = false;
-                }, 5000);
+                }, 800);
             }
         });
 

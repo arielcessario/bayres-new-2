@@ -113,6 +113,9 @@
                                 CartVars.carrito[i].nombre = producto.nombre;
 
                                 var miProducto = productoEntityToUpdate(CartVars.carrito[i]);
+                                BayresService.messageConfirm = 'Agregando producto al carrito';
+                                BayresService.showMessageConfirm = true;
+                                CartVars.broadcast();
 
                                 CartService.updateProductInCart(miProducto, function(data){
                                     if(data){
@@ -120,10 +123,10 @@
                                         CartService.update(BayresService.miCarrito, function(carritoActualizado){
 
                                             if(carritoActualizado) {
-                                                BayresService.messageConfirm = 'Se agrego el producto';
+                                                // BayresService.messageConfirm = 'Se agrego el producto';
                                                 vm.agregado = false;
-                                                BayresService.showMessageConfirm = true;
-                                                CartVars.broadcast();
+                                                // BayresService.showMessageConfirm = true;
+
                                             } else {
                                                 BayresService.messageConfirm = 'Error agregando el producto';
                                                 BayresService.showMessageConfirm = true;

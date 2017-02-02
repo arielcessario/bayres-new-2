@@ -132,15 +132,16 @@ function MainController($scope, $interval, $location, AcUtils, UserService,
 
                             var miProducto = productoEntityToUpdate(CartVars.carrito[i]);
 
+                            BayresService.messageConfirm = 'Agregando producto al carrito';
+                            BayresService.showMessageConfirm = true;
+                            CartVars.broadcast();
+
                             CartService.updateProductInCart(miProducto, function(data){
                                 if(data){
                                     BayresService.miCarrito.total = CartVars.carrito_total();
                                     CartService.update(BayresService.miCarrito, function(carritoActualizado){
                                         if(carritoActualizado) {
-                                            BayresService.messageConfirm = 'Producto agregado al carrito';
-                                            BayresService.showMessageConfirm = true;
                                             vm.agregado = false;
-                                            CartVars.broadcast();
                                         } else {
                                             BayresService.messageConfirm = 'Error agregando el producto';
                                             BayresService.showMessageConfirm = true;
