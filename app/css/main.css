@@ -2761,11 +2761,11 @@ input[type='checkbox'] {
   -ms-animation-fill-mode: both;
   -o-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-duration: .5s;
-  -moz-animation-duration: .5s;
-  -ms-animation-duration: .5s;
-  -o-animation-duration: .5s;
-  animation-duration: .5s;
+  -webkit-animation-duration: .8s;
+  -moz-animation-duration: .8s;
+  -ms-animation-duration: .8s;
+  -o-animation-duration: .8s;
+  animation-duration: .8s;
 }
 
 @-webkit-keyframes fadeInLeft {
@@ -2773,11 +2773,11 @@ input[type='checkbox'] {
     opacity: 0;
     -webkit-transform: translateY(-50%);
   }
-  10% {
+  1% {
     opacity: 1;
     -webkit-transform: translateY(0);
   }
-  75% {
+  99% {
     opacity: 1;
     -webkit-transform: translateY(0);
   }
