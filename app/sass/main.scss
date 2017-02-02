@@ -1170,13 +1170,10 @@ CONTENEDORES
     flex-direction: column;
     width: 95%;
   }
-
 }
-
 .container-detalle-1, .container-detalle-2 {
   margin: 0 15px;
 }
-
 .container-detalle-2 {
   flex: 3;
   color: $font_color_text;
@@ -1267,7 +1264,6 @@ CONTROLES
   -ms-transition: all ease-in 0.2s;
   -o-transition: all ease-in 0.2s;
   transition: all ease-in 0.2s;
-
 }
 
 .btn-info:hover {
@@ -1840,6 +1836,11 @@ textarea {
   font-family: $myriad_pro_bold_condensed;
 }
 
+.menu-categoria-titulo:hover{
+  color: $font_color_text_hover;
+  cursor: pointer;
+}
+
 .menu-subcategoria {
   order: 0;
   flex: 0 1 auto;
@@ -1848,6 +1849,11 @@ textarea {
   margin-top: 40px !important;
   //font-weight: bold;
   text-transform: capitalize;
+}
+
+.menu-subcategoria-item:hover{
+  color: $font_color_text_hover;
+
 }
 
 .menu-subcategoria-item {
@@ -2422,18 +2428,18 @@ input[type='checkbox'] {
   -ms-animation-fill-mode:both;
   -o-animation-fill-mode:both;
   animation-fill-mode:both;
-  -webkit-animation-duration:5s;
-  -moz-animation-duration:5s;
-  -ms-animation-duration:5s;
-  -o-animation-duration:5s;
-  animation-duration:5s;
+  -webkit-animation-duration:.8s;
+  -moz-animation-duration:.8s;
+  -ms-animation-duration:.8s;
+  -o-animation-duration:.8s;
+  animation-duration:.8s;
 }
 
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-50%);
-  }	25% {
+  }	10% {
          opacity: 1;
          -webkit-transform: translateY(0);
        }
@@ -2451,7 +2457,7 @@ input[type='checkbox'] {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-50%);
-  }	25% {
+  }	10% {
        opacity: 1;
          -webkit-transform: translateY(0);
        }
@@ -2469,7 +2475,7 @@ input[type='checkbox'] {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-50%);
-  }	25% {
+  }	10% {
      opacity: 1;
          -webkit-transform: translateY(0);
        }
@@ -2487,7 +2493,7 @@ input[type='checkbox'] {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-50%);
-  }	25% {
+  }	10% {
     opacity: 1;
          -webkit-transform: translateY(0);
        }
