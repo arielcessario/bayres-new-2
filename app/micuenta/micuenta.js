@@ -393,13 +393,13 @@
                             CartVars.broadcast();
                         });
 
-                        setMessageResponse(false, true, false, 'La contrase�a se actualizo');
+                        setMessageResponse(false, true, false, 'La contraseña se actualizo');
                     } else {
-                        setMessageResponse(false, true, false, 'Error actualizando contrase�a');
+                        setMessageResponse(false, true, false, 'Error actualizando contraseña');
                     }
                 });
             } else {
-                setMessageResponse(false, true, false, 'Ingrese las contrase�as');
+                setMessageResponse(false, true, false, 'Ingrese las contraseñas');
             }
         }
 
@@ -426,7 +426,7 @@
                     setMessageResponse(false, false, true, 'El Pedido ya esta confirmado. No se puede cancelar');
                 }
                 else {
-                    var result = confirm('�Esta seguro que desea Cancelar el Pedido ' + carrito.carrito_id + '?');
+                    var result = confirm('¿Esta seguro que desea Cancelar el Pedido ' + carrito.carrito_id + '?');
                     if (result) {
                         carrito.status = 4;
                         CartService.update(carrito, function(data){
