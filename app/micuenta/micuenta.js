@@ -322,8 +322,19 @@
             return false;
         }
 
+        function validateEmail(email) {
+            var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            return re.test(email);
+        }
+
         function updateUser() {
             if(validateForm()) {
+
+                if(!validateEmail(vm.userForm.mail.trim())) {
+                    setMessageResponse(true, false, false, 'El mail no tiene un formato valido');
+                    return;
+                }
+
                 var mailOld = UserService.getFromToken().data.mail;
                 var mailNew = vm.userForm.mail.trim();
 
@@ -376,8 +387,9 @@
 
         function updatePwd() {
             if(vm.passwordForm.password.trim().length > 0 && vm.passwordForm.password_repeat.trim().length > 0) {
+
                 UserService.changePassword(vm.passwordForm.usuario_id, vm.passwordForm.password, vm.passwordForm.password_repeat, function (data) {
-                    if(data != -1) {
+                    if(data == 1) {
                         vm.passwordForm.password = '';
                         vm.passwordForm.password_repeat = '';
 
@@ -395,7 +407,10 @@
 
                         setMessageResponse(false, true, false, 'La contraseña se actualizo');
                     } else {
-                        setMessageResponse(false, true, false, 'Error actualizando contraseña');
+                        if(data == -1)
+                            setMessageResponse(false, true, false, 'Error actualizando contraseña');
+                        if(data == -2)
+                            setMessageResponse(false, true, false, 'La contraseña vieja no concuerda');
                     }
                 });
             } else {
