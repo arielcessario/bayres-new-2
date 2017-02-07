@@ -48,7 +48,8 @@ function sendConsulta($contactoForm)
     $mail->From = $contacto->mail;
     $mail->FromName = $contacto->nombre;
     //$mail->addAddress('mmaneff@gmail.com');     // Add a recipient
-    $mail->addAddress('info@bayresnoproblem.com.ar');  //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
+    //$mail->addAddress('info@bayresnoproblem.com.ar');  //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
+    $mail->addAddress('bayresnoproblem@hotmail.com');
     $mail->isHTML(true);    // Name is optional
 
     $mail->Subject = $contacto->asunto;
@@ -96,7 +97,8 @@ function sendCancelarCarritoComprador($usuario, $carrito)
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;
 
-    $mail->From = 'info@bayresnoproblem.com.ar'; //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
+    //$mail->From = 'info@bayresnoproblem.com.ar'; //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
+    $mail->From = 'bayresnoproblem@hotmail.com';
     $mail->FromName = 'Bayres No Problem';
     $mail->addAddress($usuario);     // Add a recipient
     $mail->isHTML(true);    // Name is optional
