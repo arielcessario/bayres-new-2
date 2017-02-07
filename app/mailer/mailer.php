@@ -47,9 +47,8 @@ function sendConsulta($contactoForm)
 
     $mail->From = $contacto->mail;
     $mail->FromName = $contacto->nombre;
-    $mail->addAddress('mmaneff@gmail.com');     // Add a recipient
-    $mail->addAddress('juan.dilello@gmail.com');               // Name is optional
-    //$mail->addAddress('info@bayresnoproblem.com.ar');  //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
+    //$mail->addAddress('mmaneff@gmail.com');     // Add a recipient
+    $mail->addAddress('info@bayresnoproblem.com.ar');  //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
     $mail->isHTML(true);    // Name is optional
 
     $mail->Subject = $contacto->asunto;
@@ -100,7 +99,6 @@ function sendCancelarCarritoComprador($usuario, $carrito)
     $mail->From = 'info@bayresnoproblem.com.ar'; //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
     $mail->FromName = 'Bayres No Problem';
     $mail->addAddress($usuario);     // Add a recipient
-    $mail->addAddress('juan.dilello@gmail.com');               // Name is optional
     $mail->isHTML(true);    // Name is optional
 
     $mail->Subject = "Cancelar Pedido " . $carritoInfo->carrito_id;
@@ -157,7 +155,6 @@ function sendCancelarCarritoVendedor($usuario, $email, $carrito)
     $mail->From = $email;
     $mail->FromName = $usuario;
     $mail->addAddress($email);     // Add a recipient
-    $mail->addAddress('juan.dilello@gmail.com');               // Name is optional
     $mail->isHTML(true);    // Name is optional
 
     $mail->Subject = "Cancelar Pedido " . $carritoInfo->carrito_id;
@@ -213,12 +210,13 @@ function sendCarritoComprador($email, $nombre, $carrito, $sucursal, $direccion, 
     }
 
     $message = '<html><body><div style="font-family:Arial,sans-serif;font-size:15px;color:#006837; color:rgb(0,104,55);margin:0 auto; width:635px;">';
-    $message .= '<div style="background:#006837; background:rgba(0,104,55,1); border-style:Solid; border-color:#000000; border-color:rgba(0, 0, 0, 1); border-width:1px; left:-14px; top:-7px; width:635px;">';
+    $message .= '<div style="left:-14px; top:-7px; width:635px;/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cdeb8e+0,a5c956+100;Green+3D+%232 */
+background: #cdeb8e; /* Old browsers */">';
 //    $message .= '<div style="background-image: background-repeat:no-repeat; width:606px; height:176px;"><img src="http://arielcessario.com.ar/~arielces/animations/img/logo.png" alt="BayresNoProblem" title="BayresNoProblem" style="display:block" width="606" height="176"></div>';
-    $message .= '<div style="background-image: background-repeat:no-repeat; width:606px; height:176px;"><img src="https://res.cloudinary.com/ac-desarrollos/image/upload/v1486047383/logo_coxqsb.png" alt="BayresNoProblem" title="BayresNoProblem"></div>';
-    $message .= '<div style="text-align:center;color:#fff;">';
-    $message .= '<div>Suc. Once (15-3049-8691) - Suc. Flores (15-6676-2685) - Suc. Almagro (15-3041-2252) - Suc. Liniers (15-6676-2716)</div>';
-    $message .= '<div style="color:#000;background:#FFFFFF; background:rgba(255,255,255,1); border-style:Solid; border-color:#000000; border-color:rgba(0,0,0,1); border-width:1px; margin: 40px 10px 0 10px; border-radius:12px; -moz-border-radius: 12px; -webkit-border-radius: 12px;padding-bottom: 35px;">';
+    $message .= '<div style="text-align:center; padding30px; background-image: background-repeat:no-repeat; width:606px; height:176px;"><img style="width: 500px" src="https://res.cloudinary.com/ac-desarrollos/image/upload/v1486047383/logo_coxqsb.png" alt="BayresNoProblem" title="BayresNoProblem"></div>';
+    $message .= '<div style="text-align:center;color:#fff;padding-bottom: 10px;">';
+    $message .= '<div style="font-weight:bolder; color: black; padding-left: 30px; padding-right: 30px; font-size: 21px">Suc. Once (15-3049-8691) - Suc. Flores (15-6676-2685) - Suc. Almagro (15-3041-2252) - Suc. Liniers (15-6676-2716)</div>';
+    $message .= '<div style="color:#000;background:#FFFFFF; background:rgba(255,255,255,1); margin: 40px 10px 0 10px; border-radius:12px; -moz-border-radius: 12px; -webkit-border-radius: 12px;padding-bottom: 35px;">';
     $message .= '<div style="font-weight:bold;text-align:center;font-size:1.5em; margin-top:10px;">Estimado '. $nombre .'</div>';
     $message .= '<div style="margin-top:20px;text-align:center;">Gracias por comprar con nosotros.</div>';
     $message .= '<div style="text-align:center;">Abajo encontrara los detalles de la orden de compra.</div>';
@@ -226,21 +224,23 @@ function sendCarritoComprador($email, $nombre, $carrito, $sucursal, $direccion, 
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Datos del Pedido: </label><a href="http://arielcessario.com.ar/~arielces/bayres-new/#/agreement/'.$micarrito->carrito_id .'">Ver Pedido</a></div>';
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Fecha del Pedido: </label>' . $micarrito->fecha . '</div>';
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold">Contenido del Pedido:</label></div>';
-    $message .= '<div style="background:#006837; background:rgba(0,104,55,1); margin:0 auto; padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; min-height: 200px; margin-top:5%;color:#fff;margin-left: 5px;margin-right: 5px;">';
-    $message .= '<table style="font-size:12px;color:#fff;width:100%"><tr><th style="font-size:14px;text-align:left">Producto</th><th style="font-size:14px;text-align:right">Precio</th><th style="font-size:14px;text-align:right">Cantidad</th><th style="font-size:14px;text-align:right">Total</th></tr>';
+    $message .= '<div style="color:black; margin:0 auto; padding:20px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; min-height: 200px; margin-top:5%;color:#fff;margin-left: 5px;margin-right: 5px; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cdeb8e+0,a5c956+100;Green+3D+%232 */
+background: gray; /* Old browsers */">';
+    $message .= '<table style="font-size:13px;color:#fff;width:100%"><tr><th style="color:white; font-size:25px;text-align:left">Producto</th><th style="font-size:25px;text-align:right;color:white; ">Precio</th><th style="color:white; font-size:25px;text-align:right">Cantidad</th><th style="color:white; font-size:25px;text-align:right">Total</th></tr>';
     $message .= ''. $detalles .'';
     $message .= '</table></div>';
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold; font-size:22px;">Subtotal: </label><span style="font-size:20px; color:#006837;">$' . number_format((float)$micarrito->total, 2, '.', '') . '</span></div>';
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold; font-size:22px;">Total: </label><span style="font-size:20px; color:#006837;">$' . number_format((float)$micarrito->total, 2, '.', '') . '</span></div>';
     $message .= '<div style="margin:20px 0 0 15px;"><label style="font-weight:bold; font-size:14px;">Metodos de pago: tarjetas de crédito, transferencia bancaria, deposito bancario, pago fácil, rapi pago, mercado pago.</label></div>';
-    $message .= '<div style="background:#006837; background:rgba(0,104,55,1); padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; margin-top:5%;color:#fff;margin-left: 5px;margin-right: 5px;">';
-    $message .= '<div style="font-size:18px; font-weight:bold; margin:10px 0 0 10px;">Direccion de Envio:</div>';
-    $message .= '<div style="font-size:16px; margin-left:10px;">'. $nombre .'</div>';
-    $message .= '<div style="font-size:16px; margin-left:10px;">'. $direccion .'</div>';
-    $message .= '<div style="font-size:16px; margin:0 0 10px 10px;">'. $sucursal .'</div>';
-    $message .= '<div style="font-size:16px; margin:0 0 10px 10px;">Tipo Envio: '. $tipoEnvio .'</div>';
-    $message .= '<div style="font-size:16px; margin:0 0 10px 10px;">Lugar de Envio: '. $lugarDeEnvio .'</div>';
-    $message .= '</div><div style="text-align:center;font-weight: bold;margin-top: 15px;">Gracias por su compra</div></div></div>';
+    $message .= '<div style="border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; margin-top:5%;color:#fff;margin-left: 5px;margin-right: 5px; color: black; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cdeb8e+0,a5c956+100;Green+3D+%232 */
+background: gray; /* Old browsers */">';
+    $message .= '<div style="background-color:black; color:white; font-size:18px; padding: 5px; font-weight:bold;">Direccion de Envio:</div>';
+    $message .= '<div style="font-size:16px; color:white; font-weight:bolder; margin-left:10px; margin-top: 20px">'. $nombre .'</div>';
+    $message .= '<div style="font-size:16px; color:white; margin-left:10px;">'. $direccion .'</div>';
+    $message .= '<div style="font-size:16px; color:white; margin:0 0 10px 10px;">'. $sucursal .'</div>';
+    $message .= '<div style="font-weight: bolder; color:white; font-size:16px; margin:0 0 10px 10px;">Tipo Envio: '. $tipoEnvio .'</div>';
+    $message .= '<div style="font-weight: bolder; color:white; padding-bottom:20px; font-size:16px; margin:0 0 10px 10px;">Lugar de Envio: '. $lugarDeEnvio .'</div>';
+    $message .= '</div><div style="font-size: 20px; text-align:center;font-weight: bold;">Gracias por su compra</div></div></div>';
     $message .= '</table>';
     $message .= '</div></body></html>';
 
@@ -257,7 +257,6 @@ function sendCarritoComprador($email, $nombre, $carrito, $sucursal, $direccion, 
     //$mail->From = 'info@bayresnoproblem.com.ar'; //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
     $mail->FromName = 'Bayres No Problem';
     $mail->addAddress($email);     // Add a recipient
-    $mail->addAddress('arielcessario@gmail.com');               // Name is optional
     $mail->isHTML(true);    // Name is optional
 
     $mail->Subject = 'Detalle de Compra Nro ' . $micarrito->carrito_id;
