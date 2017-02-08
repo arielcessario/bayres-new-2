@@ -104,9 +104,9 @@
     <!--</div>-->
     <div ng-repeat="categoria in bayresCtrl.categorias">
       <div class="menu-subcategoria">
-        <div class="menu-categoria-titulo" ng-click="bayresCtrl.getByCategoria(categoria.categoria_id);bayresCtrl.goToAnchor('section-2', 'section-2');">{{categoria.nombre}} (<span style="color: #ffff00;">{{categoria.total}}</span>)</div>
+        <div class="menu-categoria-titulo" ng-click="bayresCtrl.getByCategoria(categoria.categoria_id);bayresCtrl.goToAnchor('section-2', 'section-2');">{{categoria.nombre}} <span ng-if="categoria.total != 0">(<span style="color: #ffff00;">{{categoria.total}}</span>)</span></div>
         <div class="menu-separator" ng-repeat="subcategoria in categoria.subcategorias" ng-click="bayresCtrl.getByCategoria(subcategoria.categoria_id);bayresCtrl.goToAnchor('section-2', 'section-2');">
-          <spam class="menu-subcategoria-item">{{subcategoria.nombre}} (<span style="color: #ffff00;">{{subcategoria.total}}</span>)</spam>
+          <span class="menu-subcategoria-item">{{subcategoria.nombre}} <span ng-if="subcategoria.total != 0">(<span style="color: #ffff00;">{{subcategoria.total}}</span>)</span></span>
         </div>
       </div>
     </div>
