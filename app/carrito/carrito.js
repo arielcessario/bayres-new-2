@@ -67,7 +67,14 @@
         vm.carritoInfo.totalAPagar = (CartVars.carrito.length > 0) ? CartVars.carrito_total() : BayresService.carrito_total();
 
         SucursalService.get(function (data) {
-            vm.sucursales = data;
+            for(var i in data){
+                if(data[i].nombre != "Deposito"){
+                    vm.sucursales.push(data[i]);
+
+                }
+            }
+
+            // vm.sucursales = data;
             vm.sucursal = data[0];
         });
 
