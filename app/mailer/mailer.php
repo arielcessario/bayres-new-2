@@ -50,6 +50,7 @@ function sendConsulta($contactoForm)
     //$mail->addAddress('mmaneff@gmail.com');     // Add a recipient
     //$mail->addAddress('info@bayresnoproblem.com.ar');  //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
     $mail->addAddress('bayresnoproblem@hotmail.com');
+    $mail->addAddress('bayresnoproblem@hotmail.com.ar');
     $mail->isHTML(true);    // Name is optional
 
     $mail->Subject = $contacto->asunto;
@@ -325,10 +326,14 @@ function sendCarritoVendedor($email, $nombre, $carrito, $sucursal, $direccion, $
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;
 
-    $mail->From = $email;
+    $mail->From = 'bayresnoproblem@hotmail.com';
     $mail->FromName = 'Bayres No Problem';
     $mail->addAddress('bayresnoproblem@hotmail.com');               // Name is optional
-    //$mail->addAddress('info@bayresnoproblem.com.ar'); //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
+    $mail->addAddress('bayresnoproblem@hotmail.com.ar');               // Name is optional
+    $mail->addAddress('tantopc@hotmail.com');               // Name is optional
+    $mail->addAddress('arielcessario@gmail.com'); //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
+    $mail->addAddress('diegoyankelevich@gmail.com'); //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
+    $mail->addAddress('mmaneff@gmail.com'); //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
     $mail->isHTML(true);    // Name is optional
 
     $mail->Subject = 'Detalle de Compra Nro ' . $micarrito->carrito_id . ' - Cliente ' . $nombre;
