@@ -330,6 +330,7 @@ function sendCarritoVendedor($email, $nombre, $carrito, $sucursal, $direccion, $
     $mail->FromName = 'Bayres No Problem';
     $mail->addAddress('bayresnoproblem@hotmail.com');               // Name is optional
     $mail->addAddress('bayresnoproblem@hotmail.com.ar');               // Name is optional
+    $mail->addAddress('bayresnoproblemgrow@gmail.com');               // Name is optional
     $mail->addAddress('tantopc@hotmail.com');               // Name is optional
     $mail->addAddress('arielcessario@gmail.com'); //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
     $mail->addAddress('diegoyankelevich@gmail.com'); //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
