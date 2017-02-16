@@ -51,6 +51,7 @@ function sendConsulta($contactoForm)
     //$mail->addAddress('info@bayresnoproblem.com.ar');  //ESTE CORREO SOLO SE HABILITA EN PRODUCCION
     $mail->addAddress('bayresnoproblem@hotmail.com');
     $mail->addAddress('bayresnoproblem@hotmail.com.ar');
+    $mail->addAddress('bayresnoproblemgrow@gmail.com');               // Name is optional
     $mail->isHTML(true);    // Name is optional
 
     $mail->Subject = $contacto->asunto;
