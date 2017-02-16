@@ -105,7 +105,36 @@ function LoginController($location, UserService, LinksService, BayresService, Ca
                   CartVars.broadcast();
               }
             }
+            //Si no tiene carrito lo CREO
+            else {
+              //console.log(BayresService.carrito);
+              if(!BayresService.tieneCarrito && BayresService.carrito.length > 0) {
+                var carrito = {'usuario_id': BayresService.usuario.id, 'total': BayresService.carrito_total(), 'status': 0};
+
+                CartService.create(carrito, function(carritoCreado) {
+                  if (carritoCreado != -1) {
+                    BayresService.tieneCarrito = true;
+                    BayresService.miCarrito = carritoCreado;
+
+                    CartService.addToCart(carritoCreado.carrito_id, BayresService.carrito, function(data){
+                      if(data != -1) {
+                        for(var i=0; i < BayresService.carrito.length; i++) {
+                          for(var j=0; j < CartVars.carrito.length; j++){
+                            if(CartVars.carrito[j].producto_id == BayresService.carrito[i].producto_id){
+                              if(CartVars.carrito[j].nombre === undefined)
+                                CartVars.carrito[j].nombre = BayresService.carrito[i].nombre;
+                            }
+                          }
+                        }
+                        BayresService.carrito = [];
+                      }
+                    });
+                  }
+                });
+              }
+            }
           });
+          /*
           //console.log(BayresService.carrito);
           if(!BayresService.tieneCarrito && BayresService.carrito.length > 0) {
             var carrito = {'usuario_id': BayresService.usuario.id, 'total': BayresService.carrito_total(), 'status': 0};
@@ -131,6 +160,7 @@ function LoginController($location, UserService, LinksService, BayresService, Ca
               }
             });
           }
+          */
           vm.recoveryPassword = false;
           $location.path('/main');
           LinksService.selectedIncludeTop = 'main/ofertas.html';
