@@ -40,8 +40,8 @@ function sendConsulta($contactoForm)
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'gator4184.hostgator.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'ventas@ac-desarrollos.com';                 // SMTP username
-    $mail->Password = 'ventas0_*020ventas';                           // SMTP password
+    $mail->Username = 'ventasweb@bayresnoproblem.com.ar';                 // SMTP username
+    $mail->Password = 'v3nt4s!Web';                           // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;
 
@@ -151,8 +151,8 @@ function sendCancelarCarritoVendedor($usuario, $email, $carrito)
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'gator4184.hostgator.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'ventas@ac-desarrollos.com';                 // SMTP username
-    $mail->Password = 'ventas0_*020ventas';                           // SMTP password
+    $mail->Username = 'ventasweb@bayresnoproblem.com.ar';                 // SMTP username
+    $mail->Password = 'v3nt4s!Web';                           // SMTP password
     $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;
 
@@ -310,6 +310,7 @@ function sendCarritoVendedor($email, $nombre, $carrito, $sucursal, $direccion, $
     $message .= '<div style="background:#006837; background:rgba(0,104,55,1); padding:10px; border-radius:12px; -moz-border-radius:12px; -webkit-border-radius:12px; margin-top:5%;color:#fff;margin-left: 5px;margin-right: 5px;">';
     $message .= '<div style="font-size:18px; font-weight:bold; margin:10px 0 0 10px;">Direccion de Envio:</div>';
     $message .= '<div style="font-size:16px; margin-left:10px;">'. $nombre .'</div>';
+    $message .= '<div style="font-size:16px; margin-left:10px;">'. $email .'</div>';
     $message .= '<div style="font-size:16px; margin-left:10px;">'. $direccion .'</div>';
     $message .= '<div style="font-size:16px; margin:0 0 10px 10px;">'. $sucursal .'</div>';
     $message .= '<div style="font-size:16px; margin:0 0 10px 10px;">Tipo Envio: '. $tipoEnvio .'</div>';
@@ -320,14 +321,15 @@ function sendCarritoVendedor($email, $nombre, $carrito, $sucursal, $direccion, $
 
     $mail = new PHPMailer;
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'gator4184.hostgator.com';  // Specify main and backup SMTP servers
+    $mail->SMTPDebug = 2;
+    $mail->Host = 'gator4184.hostgator.com';              // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'ventas@ac-desarrollos.com';                 // SMTP username
-    $mail->Password = 'ventas0_*020ventas';                           // SMTP password
-    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 465;
+    $mail->Username = 'ventasweb@bayresnoproblem.com.ar'; // SMTP username
+    $mail->Password = 'v3nt4s!Web';                       // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;
 
-    $mail->From = 'bayresnoproblem@hotmail.com';
+    $mail->From = 'ventasweb@bayresnoproblem.com.ar';
     $mail->FromName = 'Bayres No Problem';
     $mail->addAddress('bayresnoproblem@hotmail.com');               // Name is optional
     $mail->addAddress('bayresnoproblem@hotmail.com.ar');               // Name is optional
